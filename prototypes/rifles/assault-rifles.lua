@@ -1,3 +1,4 @@
+-- TODO Add graphics for assualt rifles
 data:extend(
 {        
     {
