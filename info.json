@@ -1,0 +1,13 @@
+{
+    "name": "darkstar-weapons",
+    "version": "0.0.1",
+    "title": "Darkstar Weapons",
+    "author": "zombieland4942",
+    "contact": "",
+    "homepage": "",
+    "dependencies": [
+        "base >= 0.18.24"
+    ],
+    "description": "",
+    "factorio_version": "0.18"
+}
