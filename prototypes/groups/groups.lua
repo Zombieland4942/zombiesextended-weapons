@@ -24,6 +24,12 @@ data:extend(
         name = "ds-railgun",
         group = "darkstar-weapons",
         order = "c"
+    },
+    {
+        type = "item-subgroup",
+        name = "ds-rockets",
+        group = "darkstar-weapons",
+        order = "c"
     }
 }
 )

@@ -9,3 +9,7 @@ require("prototypes.ammo.sniper-ammo")
 
 require("prototypes.weapons.railgun-rifles")
 require("prototypes.ammo.railgun-ammo")
+
+require("prototypes.weapons.rocket-launchers")
+require("prototypes.ammo.rocket-ammo")
+require("prototypes.projectiles.rocket-projectiles")
