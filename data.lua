@@ -1,5 +1,4 @@
 require("prototypes.configuration")
-require("prototypes.groups.groups")
 
 require("prototypes.weapons.assault-rifles")
 require("prototypes.ammo.assault-ammo")
