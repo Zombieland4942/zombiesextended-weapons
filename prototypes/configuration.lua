@@ -54,3 +54,21 @@ rocket_ammo =
     { order ="c", name = "antimatter-nuke-mk1", projectile = "antimatter-nuke-projectile-mk1" },
     { order ="d", name = "antimatter-nuke-mk2", projectile = "antimatter-nuke-projectile-mk2" }
 }
+
+walls =
+{
+    { order = "a", name = "wall-mk1", health = 450 },
+    { order = "b", name = "wall-mk2", health = 550 },
+}
+
+gates =
+{
+    { order = "c", name = "gate-mk1", health = 450 },
+    { order = "d", name = "gate-mk2", health = 550 },
+}
+
+radars =
+{
+    { order = "e", name = "radar-mk1", health = 300, energy_con_kw = 400, constant_range = 4, max_range = 16 },
+    { order = "f", name = "radar-mk2", health = 350, energy_con_kw = 500, constant_range = 5, max_range = 30 },
+}
