@@ -57,18 +57,21 @@ rocket_ammo =
 
 walls =
 {
-    { order = "a", name = "wall-mk1", health = 450 },
-    { order = "b", name = "wall-mk2", health = 550 },
+    { order = "a-a", name = "wall-mk1", health = 450 },
+    { order = "a-b", name = "wall-mk2", health = 550 },
+    { order = "a-c", name = "wall-mk3", health = 650 },
 }
 
 gates =
 {
-    { order = "c", name = "gate-mk1", health = 450 },
-    { order = "d", name = "gate-mk2", health = 550 },
+    { order = "b-a", name = "gate-mk1", health = 450 },
+    { order = "b-b", name = "gate-mk2", health = 550 },
+    { order = "b-c", name = "gate-mk3", health = 650 },
 }
 
 radars =
 {
-    { order = "e", name = "radar-mk1", health = 300, energy_con_kw = 400, constant_range = 4, max_range = 16 },
-    { order = "f", name = "radar-mk2", health = 350, energy_con_kw = 500, constant_range = 5, max_range = 30 },
+    { order = "c-a", name = "radar-mk1", health = 300, energy_con_kw = 400, constant_range = 4, max_range = 16 },
+    { order = "c-b", name = "radar-mk2", health = 350, energy_con_kw = 500, constant_range = 5, max_range = 30 },
+    { order = "c-c", name = "radar-mk3", health = 400, energy_con_kw = 600, constant_range = 7, max_range = 60 },
 }
