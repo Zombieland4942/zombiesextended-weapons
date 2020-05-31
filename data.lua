@@ -1,4 +1,4 @@
-require("prototypes.configuration")
+require("configuration")
 
 require("prototypes.assault-rifles")
 require("prototypes.assault-ammo")
