@@ -1,8 +1,22 @@
 -- TODO Add graphics for assualt rifles
 
-for x,ar in pairs(assault_rifle) do
+for x,ar in pairs(assault_rifle) do 
+
+    print("tech " .. ar.technology)
+    print("name " .. ar.name)
+    
+    table.insert(data.raw["technology"][ar.technology].effects, { type = "unlock-recipe", recipe = ar.name })
+
     data:extend(
         {        
+            {
+                type = "recipe",
+                name = ar.name,
+                enabled = false,
+                energy_required = 5,
+                ingredients = ar.ingredients,
+                result = ar.name
+            },
             {
                 type = "gun",
                 name = ar.name,

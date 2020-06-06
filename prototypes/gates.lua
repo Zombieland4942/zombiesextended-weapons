@@ -33,6 +33,17 @@ for x, gate in pairs(gates) do
     item.place_result = gate.name
     item.order = gate.order
     item.subgroup = "ds-wall"
+ 
+    table.insert(data.raw["technology"][gate.technology].effects, { type = "unlock-recipe", recipe = gate.name })
 
-    data:extend({ entity, item })
+    data:extend({ entity, item,
+        {
+            type = "recipe",
+            name = gate.name,
+            enabled = false,
+            energy_required = 5,
+            ingredients = gate.ingredients,
+            result = gate.name
+        },
+    })
 end

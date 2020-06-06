@@ -1,7 +1,18 @@
 
 for x,rocket in pairs(rocket_ammo) do
+         
+    table.insert(data.raw["technology"][rocket.technology].effects, { type = "unlock-recipe", recipe = rocket.name })
+
     data:extend(
         {
+            {
+                type = "recipe",
+                name = rocket.name,
+                enabled = false,
+                energy_required = 5,
+                ingredients = rocket.ingredients,
+                result = rocket.name
+            },
             {
                 type = "ammo",
                 name = rocket.name,

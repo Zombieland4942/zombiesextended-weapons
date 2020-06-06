@@ -25,6 +25,17 @@ for x, radar in pairs(radars) do
     item.place_result = radar.name
     item.order = radar.order
     item.subgroup = "ds-radar"
+     
+    table.insert(data.raw["technology"][radar.technology].effects, { type = "unlock-recipe", recipe = radar.name })
 
-    data:extend({ entity, item })
+    data:extend({ entity, item,
+        {
+            type = "recipe",
+            name = radar.name,
+            enabled = false,
+            energy_required = 5,
+            ingredients = radar.ingredients,
+            result = radar.name
+        }
+    })
 end

@@ -1,8 +1,19 @@
 -- TODO Add graphics for sniper rifles
 
 for x,sniper in pairs(sniper_rifle) do
+    
+    table.insert(data.raw["technology"][sniper.technology].effects, { type = "unlock-recipe", recipe = sniper.name })
+
     data:extend(
-        {        
+        {
+            {
+                type = "recipe",
+                name = sniper.name,
+                enabled = false,
+                energy_required = 5,
+                ingredients = sniper.ingredients,
+                result = sniper.name
+            },        
             {
                 type = "gun",
                 name = sniper.name,

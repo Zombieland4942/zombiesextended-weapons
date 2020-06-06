@@ -40,6 +40,17 @@ for x, wall in pairs(walls) do
     item.place_result = wall.name
     item.order = wall.order
     item.subgroup = "ds-wall"
+ 
+    table.insert(data.raw["technology"][wall.technology].effects, { type = "unlock-recipe", recipe = wall.name })
 
-    data:extend({ entity, item })
+    data:extend({ entity, item,
+        {
+            type = "recipe",
+            name = wall.name,
+            enabled = false,
+            energy_required = 5,
+            ingredients = wall.ingredients,
+            result = wall.name
+        },
+    })
 end

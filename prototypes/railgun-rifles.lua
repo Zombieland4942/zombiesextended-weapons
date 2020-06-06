@@ -1,8 +1,18 @@
 
 for x,railgun in pairs(railgun_rifle) do
 
+    table.insert(data.raw["technology"][railgun.technology].effects, { type = "unlock-recipe", recipe = railgun.name })
+
     data:extend(
     {
+        {
+            type = "recipe",
+            name = railgun.name,
+            enabled = false,
+            energy_required = 5,
+            ingredients = railgun.ingredients,
+            result = railgun.name
+        },
         {
             type = "gun",
             name = railgun.name,

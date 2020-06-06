@@ -8,8 +8,19 @@ data:extend(
 )
 
 for x,ammo in pairs(sniper_rifle_ammo) do
+     
+    table.insert(data.raw["technology"][ammo.technology].effects, { type = "unlock-recipe", recipe = ammo.name })
+
     data:extend(
         {
+            {
+                type = "recipe",
+                name = ammo.name,
+                enabled = false,
+                energy_required = 5,
+                ingredients = ammo.ingredients,
+                result = ammo.name
+            },
             {
                 type = "ammo",
                 name = ammo.name,
