@@ -16,7 +16,7 @@ for x,railgun_ammo in pairs(railgun_rifle_ammo) do
             {
                 type = "ammo",
                 name = railgun_ammo.name,
-                icon = "__darkstar-weapons__/graphics/icons/" .. railgun_ammo.name .. ".png",
+                icon = "__zombiesextended-weapons__/graphics/icons/" .. railgun_ammo.name .. ".png",
                 icon_size = 64, 
                 icon_mipmaps = 4,
                 ammo_type =

@@ -16,7 +16,7 @@ for x,rocket in pairs(rocket_ammo) do
             {
                 type = "ammo",
                 name = rocket.name,
-                icon = "__darkstar-weapons__/graphics/icons/" .. rocket.name .. ".png",
+                icon = "__zombiesextended-weapons__/graphics/icons/" .. rocket.name .. ".png",
                 icon_size = 64, icon_mipmaps = 4,
                 ammo_type =
                 {
