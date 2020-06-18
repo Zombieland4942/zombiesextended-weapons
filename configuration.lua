@@ -66,7 +66,7 @@ railgun_rifle_ammo =
 
 rocket_launcher = 
 {
-    { order = "a", name = "rocket-launcher-mk1", range = 80, cooldown = 60, ingredients = { {"rocket-launcher",2} }, technology = "advanced-rifles-mk1" },
+    { order = "a", name = "rocket-launcher-mk1", range = 80, cooldown = 60, ingredients = { {"rocket-launcher",2},{"complex-processing-unit",2} }, technology = "advanced-rifles-mk1" },
     { order = "b", name = "rocket-launcher-mk2", range = 160, cooldown = 40, ingredients = { {"rocket-launcher-mk1",2},{"vibranium-plate",10} }, technology = "advanced-rifles-mk2" }
 }
 
