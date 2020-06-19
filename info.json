@@ -4,10 +4,11 @@
     "title": "ZombiesExtended Weapons",
     "author": "zombieland4942",
     "contact": "",
-    "homepage": "",
+    "homepage": "https://github.com/Zombieland4942/zombiesextended-weapons",
     "dependencies": [
-        "base >= 0.18.24"
+        "base >= 0.18.31",
+        "zombiesextended-core >= 0.0.1"
     ],
-    "description": "",
+    "description": "ZombiesExtended Weapons adds higher teir weapons and explosives. This mod is still being tuned, please check the readme before upgrading the mod. Ps. No Zombies are added.",
     "factorio_version": "0.18"
 }
