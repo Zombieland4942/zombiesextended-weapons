@@ -46,7 +46,7 @@ for x,railgun_ammo in pairs(railgun_rifle_ammo) do
                         }
                     }
                 },
-                magazine_size = 100,
+                magazine_size = 10,
                 subgroup = "ds-railgun",
                 order = railgun_ammo.order,
                 stack_size = 200

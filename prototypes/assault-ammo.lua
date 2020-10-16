@@ -48,7 +48,7 @@ for x,ammo in pairs(assault_rifle_ammo) do
                         }
                     }
                 },
-                magazine_size = 100,
+                magazine_size = 10,
                 subgroup = "ds-assult",
                 order = ammo.order,
                 stack_size = 200

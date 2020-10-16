@@ -56,7 +56,7 @@ for x,ammo in pairs(sniper_rifle_ammo) do
                         }
                     }
                 },
-                magazine_size = 100,
+                magazine_size = 10,
                 subgroup = "ds-sniper",
                 order = ammo.order,
                 stack_size = 200
