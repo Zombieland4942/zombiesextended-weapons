@@ -13,8 +13,7 @@ technologies = {
     { order = "a-b-b", name = "advanced-ammo-mk2", count = 800, time = 60, prerequisite = {"advanced-ammo-mk1","advanced-rifles-mk2"}, ingredients = science_t5 },
     { order = "a-b-c", name = "advanced-ammo-mk3", count = 1000, time = 60, prerequisite = {"advanced-ammo-mk2"}, ingredients = science_t5 },
 
-    { order = "a-c-a", name = "advanced-nuclear-bombs-mk1", count = 8000, time = 60, prerequisite = {"atomic-bomb"}, ingredients = science_t6 },
-    { order = "a-c-b", name = "advanced-nuclear-bombs-mk2", count = 16000, time = 60, prerequisite = {"advanced-nuclear-bombs-mk1"}, ingredients = science_t6 },
+    { order = "a-c-a", name = "advanced-nuclear-bombs-mk1", count = 10000, time = 60, prerequisite = {"atomic-bomb"}, ingredients = science_t6 },
     
     { order = "a-d-a", name = "vibranium-walls-mk1", count = 200, time = 30, prerequisite = {"stone-walls"}, ingredients = science_t3 },
     { order = "a-d-b", name = "vibranium-walls-mk2", count = 200, time = 30, prerequisite = {"vibranium-walls-mk1"}, ingredients = science_t4 },
@@ -72,14 +71,12 @@ rocket_launcher =
 
 rocket_projectile =
 {
-    { name = "antimatter-nuke-projectile-mk1", damage_amount = 800, radius = 80, repeat_count = 3000 },
-    { name = "antimatter-nuke-projectile-mk2", damage_amount = 1600, radius = 160, repeat_count = 10000 }
+    { name = "antimatter-nuke-projectile-mk1", damage_amount = 1000, radius = 80, crater_size = 20, flash_duration = 100, flash_max_distance = 1500, flash_strength = 10 }
 }
 
 rocket_ammo =
 {
-    { order ="c", name = "antimatter-nuke-mk1", projectile = "antimatter-nuke-projectile-mk1", ingredients = { {"atomic-bomb", 4},{"vibranium-plate",10},{"complex-processing-unit",10} }, technology = "advanced-nuclear-bombs-mk1" },
-    { order ="d", name = "antimatter-nuke-mk2", projectile = "antimatter-nuke-projectile-mk2", ingredients = { {"antimatter-nuke-mk1", 4},{"vibranium-plate",20},{"complex-processing-unit",20} }, technology = "advanced-nuclear-bombs-mk2" }
+    { order ="c", name = "antimatter-nuke-mk1", projectile = "antimatter-nuke-projectile-mk1", ingredients = { {"atomic-bomb", 4},{"vibranium-plate",10},{"complex-processing-unit",10} }, technology = "advanced-nuclear-bombs-mk1" }
 }
 
 walls =
