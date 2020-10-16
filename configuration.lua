@@ -13,8 +13,9 @@ technologies = {
     { order = "a-b-b", name = "advanced-ammo-mk2", count = 800, time = 60, prerequisite = {"advanced-ammo-mk1","advanced-rifles-mk2"}, ingredients = science_t5 },
     { order = "a-b-c", name = "advanced-ammo-mk3", count = 1000, time = 60, prerequisite = {"advanced-ammo-mk2"}, ingredients = science_t5 },
 
+    { order = "a-c-a", name = "advanced-nuclear-bombs-mk1", count = 8000, time = 60, prerequisite = {"atomic-bomb"}, ingredients = science_t6 },
     { order = "a-c-b", name = "advanced-nuclear-bombs-mk2", count = 16000, time = 60, prerequisite = {"advanced-nuclear-bombs-mk1"}, ingredients = science_t6 },
-
+    
     { order = "a-d-a", name = "vibranium-walls-mk1", count = 200, time = 30, prerequisite = {"stone-walls"}, ingredients = science_t3 },
     { order = "a-d-b", name = "vibranium-walls-mk2", count = 200, time = 30, prerequisite = {"vibranium-walls-mk1"}, ingredients = science_t4 },
     { order = "a-d-c", name = "vibranium-walls-mk3", count = 200, time = 30, prerequisite = {"vibranium-walls-mk2"}, ingredients = science_t5 },
