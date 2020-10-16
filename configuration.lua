@@ -13,8 +13,7 @@ technologies = {
     { order = "a-b-b", name = "advanced-ammo-mk2", count = 800, time = 60, prerequisite = {"advanced-ammo-mk1","advanced-rifles-mk2"}, ingredients = science_t5 },
     { order = "a-b-c", name = "advanced-ammo-mk3", count = 1000, time = 60, prerequisite = {"advanced-ammo-mk2"}, ingredients = science_t5 },
 
-    { order = "a-c-a", name = "advanced-nuclear-bombs-mk1", count = 5000, time = 60, prerequisite = {"atomic-bomb"}, ingredients = science_t6 },
-    { order = "a-c-b", name = "advanced-nuclear-bombs-mk2", count = 10000, time = 60, prerequisite = {"advanced-nuclear-bombs-mk1"}, ingredients = science_t6 },
+    { order = "a-c-b", name = "advanced-nuclear-bombs-mk2", count = 16000, time = 60, prerequisite = {"advanced-nuclear-bombs-mk1"}, ingredients = science_t6 },
 
     { order = "a-d-a", name = "vibranium-walls-mk1", count = 200, time = 30, prerequisite = {"stone-walls"}, ingredients = science_t3 },
     { order = "a-d-b", name = "vibranium-walls-mk2", count = 200, time = 30, prerequisite = {"vibranium-walls-mk1"}, ingredients = science_t4 },
@@ -27,15 +26,15 @@ technologies = {
 
 assault_rifle = 
 {
-    { order = "a", name = "assault-rifle-mk1", range = 40, cooldown = 10, ingredients = { {"submachine-gun",2} }, technology = "advanced-rifles-mk1" },
+    { order = "a", name = "assault-rifle-mk1", range = 40, cooldown = 10, ingredients = { {"submachine-gun",4} }, technology = "advanced-rifles-mk1" },
     { order = "b", name = "assault-rifle-mk2", range = 80, cooldown = 6, ingredients = { {"assault-rifle-mk1",2},{"vibranium-plate",20} }, technology = "advanced-rifles-mk2" }
 }
 
 assault_rifle_ammo = 
 {
-    { order = "c", name = "assault-ammo-mk1", damage_amount = 20, ingredients = { {"piercing-rounds-magazine",2} }, technology = "advanced-ammo-mk1" },
-    { order = "d", name = "assault-ammo-mk2", damage_amount = 40, ingredients = { {"assault-ammo-mk1",2} }, technology = "advanced-ammo-mk2" },
-    { order = "e", name = "assault-ammo-mk3", damage_amount = 80, ingredients = { {"assault-ammo-mk2",2},{"vibranium-plate",5} }, technology = "advanced-ammo-mk3" }
+    { order = "c", name = "assault-ammo-mk1", damage_amount = 20, ingredients = { {"piercing-rounds-magazine",5} }, technology = "advanced-ammo-mk1" },
+    { order = "d", name = "assault-ammo-mk2", damage_amount = 40, ingredients = { {"assault-ammo-mk1",5} }, technology = "advanced-ammo-mk2" },
+    { order = "e", name = "assault-ammo-mk3", damage_amount = 80, ingredients = { {"assault-ammo-mk2",5},{"vibranium-plate",5} }, technology = "advanced-ammo-mk3" }
 }
 
 sniper_rifle = 
@@ -47,21 +46,21 @@ sniper_rifle =
 sniper_rifle_ammo = 
 {
     { order = "c", name = "sniper-ammo-mk1", damage_amount = 40, ingredients = { {"piercing-rounds-magazine",5} }, technology = "advanced-ammo-mk1" },
-    { order = "d", name = "sniper-ammo-mk2", damage_amount = 80, ingredients = { {"sniper-ammo-mk1",2} }, technology = "advanced-ammo-mk2" },
-    { order = "e", name = "sniper-ammo-mk3", damage_amount = 160, ingredients = { {"sniper-ammo-mk2",2},{"vibranium-plate",5} }, technology = "advanced-ammo-mk3" }
+    { order = "d", name = "sniper-ammo-mk2", damage_amount = 80, ingredients = { {"sniper-ammo-mk1",5} }, technology = "advanced-ammo-mk2" },
+    { order = "e", name = "sniper-ammo-mk3", damage_amount = 160, ingredients = { {"sniper-ammo-mk2",5},{"vibranium-plate",5} }, technology = "advanced-ammo-mk3" }
 }
 
 railgun_rifle = 
 {
-    { order = "a", name = "railgun-rifle-mk1", range = 50, cooldown = 240, ingredients = { {"assault-rifle-mk1",1},{"complex-processing-unit",4} }, technology = "advanced-rifles-mk1" },
+    { order = "a", name = "railgun-rifle-mk1", range = 50, cooldown = 240, ingredients = { {"assault-rifle-mk1",1},{"complex-processing-unit",5} }, technology = "advanced-rifles-mk1" },
     { order = "b", name = "railgun-rifle-mk2", range = 100, cooldown = 180, ingredients = { {"railgun-rifle-mk1",1},{"vibranium-plate",5} }, technology = "advanced-rifles-mk2" }
 }
 
 railgun_rifle_ammo = 
 {
-    { order = "c", name = "railgun-ammo-mk1", range = 25, width = 4, damage_amount = 300, ingredients = { {"piercing-rounds-magazine",5} }, technology = "advanced-ammo-mk1" },
-    { order = "d", name = "railgun-ammo-mk2", range = 50, width = 12, damage_amount = 600, ingredients = { {"railgun-ammo-mk1",4},{"vibranium-plate",5} }, technology = "advanced-ammo-mk2" },
-    { order = "e", name = "railgun-ammo-mk3", range = 100, width = 20, damage_amount = 1200, ingredients = { {"railgun-ammo-mk2",4},{"vibranium-plate",10} }, technology = "advanced-ammo-mk3" }
+    { order = "c", name = "railgun-ammo-mk1", range = 25, width = 4, damage_amount = 300, ingredients = { {"uranium-rounds-magazine",5} }, technology = "advanced-ammo-mk1" },
+    { order = "d", name = "railgun-ammo-mk2", range = 50, width = 12, damage_amount = 600, ingredients = { {"railgun-ammo-mk1",5},{"vibranium-plate",5} }, technology = "advanced-ammo-mk2" },
+    { order = "e", name = "railgun-ammo-mk3", range = 100, width = 20, damage_amount = 1200, ingredients = { {"railgun-ammo-mk2",5},{"vibranium-plate",10} }, technology = "advanced-ammo-mk3" }
 }
 
 rocket_launcher = 
@@ -78,8 +77,8 @@ rocket_projectile =
 
 rocket_ammo =
 {
-    { order ="c", name = "antimatter-nuke-mk1", projectile = "antimatter-nuke-projectile-mk1", ingredients = { {"atomic-bomb", 2},{"vibranium-plate",10},{"complex-processing-unit",2} }, technology = "advanced-nuclear-bombs-mk1" },
-    { order ="d", name = "antimatter-nuke-mk2", projectile = "antimatter-nuke-projectile-mk2", ingredients = { {"antimatter-nuke-mk1", 2},{"vibranium-plate",20},{"complex-processing-unit",4} }, technology = "advanced-nuclear-bombs-mk2" }
+    { order ="c", name = "antimatter-nuke-mk1", projectile = "antimatter-nuke-projectile-mk1", ingredients = { {"atomic-bomb", 4},{"vibranium-plate",10},{"complex-processing-unit",10} }, technology = "advanced-nuclear-bombs-mk1" },
+    { order ="d", name = "antimatter-nuke-mk2", projectile = "antimatter-nuke-projectile-mk2", ingredients = { {"antimatter-nuke-mk1", 4},{"vibranium-plate",20},{"complex-processing-unit",20} }, technology = "advanced-nuclear-bombs-mk2" }
 }
 
 walls =
