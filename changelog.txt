@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.2
-Date: ????
+Date: 2020-10-17
   Changes:
     - Removed the MK2 Antimatter Bomb
     - Fixed up the Graphics and Tweaked the MK1's Cost and Effects.
