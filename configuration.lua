@@ -81,16 +81,16 @@ rocket_ammo =
 
 walls =
 {
-    { order = "a-a", name = "wall-mk1", health = 700, ingredients = { {"stone-wall",2},{"vibranium-plate",2} }, technology = "vibranium-walls-mk1" },
-    { order = "a-b", name = "wall-mk2", health = 1400, ingredients = { {"wall-mk1",2},{"vibranium-plate",2} }, technology = "vibranium-walls-mk2" },
-    { order = "a-c", name = "wall-mk3", health = 2800, ingredients = { {"wall-mk2",2},{"vibranium-plate",2} }, technology = "vibranium-walls-mk3" },
+    { order = "a-a", name = "wall-mk1", health = 500, ingredients = { {"stone-wall",2},{"vibranium-plate",2} }, technology = "vibranium-walls-mk1" },
+    { order = "a-b", name = "wall-mk2", health = 1000, ingredients = { {"wall-mk1",2},{"vibranium-plate",2} }, technology = "vibranium-walls-mk2" },
+    { order = "a-c", name = "wall-mk3", health = 1500, ingredients = { {"wall-mk2",2},{"vibranium-plate",2} }, technology = "vibranium-walls-mk3" },
 }
 
 gates =
 {
-    { order = "b-a", name = "gate-mk1", health = 700, ingredients = { {"gate",2},{"vibranium-plate",2} }, technology = "vibranium-walls-mk1" },
-    { order = "b-b", name = "gate-mk2", health = 1400, ingredients = { {"gate-mk1",2},{"vibranium-plate",2} }, technology = "vibranium-walls-mk2" },
-    { order = "b-c", name = "gate-mk3", health = 2800, ingredients = { {"gate-mk2",2},{"vibranium-plate",2} }, technology = "vibranium-walls-mk3" },
+    { order = "b-a", name = "gate-mk1", health = 500, ingredients = { {"gate",2},{"vibranium-plate",2} }, technology = "vibranium-walls-mk1" },
+    { order = "b-b", name = "gate-mk2", health = 1000, ingredients = { {"gate-mk1",2},{"vibranium-plate",2} }, technology = "vibranium-walls-mk2" },
+    { order = "b-c", name = "gate-mk3", health = 1500, ingredients = { {"gate-mk2",2},{"vibranium-plate",2} }, technology = "vibranium-walls-mk3" },
 }
 
 radars =
