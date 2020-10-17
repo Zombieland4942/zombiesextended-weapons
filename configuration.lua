@@ -79,6 +79,12 @@ rocket_ammo =
     { order ="c", name = "antimatter-nuke-mk1", projectile = "antimatter-nuke-projectile-mk1", ingredients = { {"atomic-bomb", 4},{"vibranium-plate",10},{"complex-processing-unit",10} }, technology = "advanced-nuclear-bombs-mk1" }
 }
 
+gun_turrets =
+{
+    { order ="a", name = "gun-turrent-mk1", range = 25, ingredients = { {"gun-turret", 2},{"vibranium-plate",5} }, technology = "advanced-nuclear-bombs-mk1" },
+    { order ="a", name = "gun-turrent-mk2", range = 30, ingredients = { {"gun-turret-mk1", 2},{"vibranium-plate",10} }, technology = "advanced-nuclear-bombs-mk1" }
+}
+
 walls =
 {
     { order = "a-a", name = "wall-mk1", health = 500, ingredients = { {"stone-wall",2},{"vibranium-plate",2} }, technology = "vibranium-walls-mk1" },
