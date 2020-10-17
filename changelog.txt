@@ -10,7 +10,7 @@ Date: 2020-10-17
     - Fixed up the Graphics and Tweaked the MK1's Cost and Effects.
     - Added Rifle Graphics
     - Added Sniper Graphics
-    - Added Teir Indicators to all guns & lauchers
+    - Added Tier Indicators to all guns & lauchers
     - Updated the MK1 Antimater Bomb Graphics
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.1
