@@ -1,5 +1,4 @@
 
-
 for x,launcher in pairs(rocket_launcher) do
      
     table.insert(data.raw["technology"][launcher.technology].effects, { type = "unlock-recipe", recipe = launcher.name })
@@ -17,8 +16,10 @@ for x,launcher in pairs(rocket_launcher) do
             {
                 type = "gun",
                 name = launcher.name,
-                icon = "__base__/graphics/icons/rocket-launcher.png",
-                icon_size = 64, icon_mipmaps = 4,
+                icons ={
+                    { icon = "__zombiesextended-weapons__/graphics/icons/" .. launcher.name .. ".png", icon_size = 64, icon_mipmaps = 4 },
+                    { icon = "__zombiesextended-weapons__/graphics/icons/" .. launcher.icon_teir .. ".png", icon_size = 64 }
+                },                
                 subgroup = "ds-rockets",
                 order = launcher.order,
                 attack_parameters =

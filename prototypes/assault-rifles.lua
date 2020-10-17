@@ -1,10 +1,6 @@
--- TODO Add graphics for assualt rifles
 
 for x,ar in pairs(assault_rifle) do 
 
-    print("tech " .. ar.technology)
-    print("name " .. ar.name)
-    
     table.insert(data.raw["technology"][ar.technology].effects, { type = "unlock-recipe", recipe = ar.name })
 
     data:extend(
@@ -20,9 +16,10 @@ for x,ar in pairs(assault_rifle) do
             {
                 type = "gun",
                 name = ar.name,
-                icon = "__base__/graphics/icons/submachine-gun.png",
-                icon_size = 64, 
-                icon_mipmaps = 4,
+                icons ={
+                    { icon = "__zombiesextended-weapons__/graphics/icons/" .. ar.name .. ".png", icon_size = 64, icon_mipmaps = 4 },
+                    { icon = "__zombiesextended-weapons__/graphics/icons/" .. ar.icon_teir .. ".png", icon_size = 64 }
+                },
                 subgroup = "ds-assult",
                 order = ar.order,
                 attack_parameters =

@@ -1,4 +1,3 @@
--- TODO Add graphics for sniper rifles
 
 for x,sniper in pairs(sniper_rifle) do
     
@@ -17,8 +16,10 @@ for x,sniper in pairs(sniper_rifle) do
             {
                 type = "gun",
                 name = sniper.name,
-                icon = "__base__/graphics/icons/submachine-gun.png",
-                icon_size = 64, icon_mipmaps = 4,
+                icons ={
+                    { icon = "__zombiesextended-weapons__/graphics/icons/" .. sniper.name .. ".png", icon_size = 64, icon_mipmaps = 4 },
+                    { icon = "__zombiesextended-weapons__/graphics/icons/" .. sniper.icon_teir .. ".png", icon_size = 64 }
+                },                
                 subgroup = "ds-sniper",
                 order = sniper.order,
                 attack_parameters =

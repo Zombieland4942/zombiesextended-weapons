@@ -26,8 +26,8 @@ technologies = {
 
 assault_rifle = 
 {
-    { order = "a", name = "assault-rifle-mk1", range = 40, cooldown = 10, ingredients = { {"submachine-gun",4} }, technology = "advanced-rifles-mk1" },
-    { order = "b", name = "assault-rifle-mk2", range = 80, cooldown = 6, ingredients = { {"assault-rifle-mk1",2},{"vibranium-plate",20} }, technology = "advanced-rifles-mk2" }
+    { order = "a", name = "assault-rifle-mk1", icon_teir="teir-1", range = 40, cooldown = 10, ingredients = { {"submachine-gun",4} }, technology = "advanced-rifles-mk1" },
+    { order = "b", name = "assault-rifle-mk2", icon_teir="teir-2", range = 80, cooldown = 6, ingredients = { {"assault-rifle-mk1",2},{"vibranium-plate",20} }, technology = "advanced-rifles-mk2" }
 }
 
 assault_rifle_ammo = 
@@ -39,8 +39,8 @@ assault_rifle_ammo =
 
 sniper_rifle = 
 {
-    { order = "a", name = "sniper-rifle-mk1", range = 70, cooldown = 20, ingredients = { {"assault-rifle-mk1",2} }, technology = "advanced-rifles-mk1" },
-    { order = "b", name = "sniper-rifle-mk2", range = 140, cooldown = 15, ingredients = { {"sniper-rifle-mk1",2},{"vibranium-plate",20} }, technology = "advanced-rifles-mk2" }
+    { order = "a", name = "sniper-rifle-mk1", icon_teir="teir-1", range = 70, cooldown = 20, ingredients = { {"assault-rifle-mk1",2} }, technology = "advanced-rifles-mk1" },
+    { order = "b", name = "sniper-rifle-mk2", icon_teir="teir-2", range = 140, cooldown = 15, ingredients = { {"sniper-rifle-mk1",2},{"vibranium-plate",20} }, technology = "advanced-rifles-mk2" }
 }
 
 sniper_rifle_ammo = 
@@ -52,8 +52,8 @@ sniper_rifle_ammo =
 
 railgun_rifle = 
 {
-    { order = "a", name = "railgun-rifle-mk1", range = 50, cooldown = 240, ingredients = { {"assault-rifle-mk1",1},{"complex-processing-unit",5} }, technology = "advanced-rifles-mk1" },
-    { order = "b", name = "railgun-rifle-mk2", range = 100, cooldown = 180, ingredients = { {"railgun-rifle-mk1",1},{"vibranium-plate",5} }, technology = "advanced-rifles-mk2" }
+    { order = "a", name = "railgun-rifle-mk1", icon_teir="teir-1", range = 50, cooldown = 240, ingredients = { {"assault-rifle-mk1",1},{"complex-processing-unit",5} }, technology = "advanced-rifles-mk1" },
+    { order = "b", name = "railgun-rifle-mk2", icon_teir="teir-2", range = 100, cooldown = 180, ingredients = { {"railgun-rifle-mk1",1},{"vibranium-plate",5} }, technology = "advanced-rifles-mk2" }
 }
 
 railgun_rifle_ammo = 
@@ -65,8 +65,8 @@ railgun_rifle_ammo =
 
 rocket_launcher = 
 {
-    { order = "a", name = "rocket-launcher-mk1", range = 80, cooldown = 60, ingredients = { {"rocket-launcher",2},{"complex-processing-unit",2} }, technology = "advanced-rifles-mk1" },
-    { order = "b", name = "rocket-launcher-mk2", range = 160, cooldown = 40, ingredients = { {"rocket-launcher-mk1",2},{"vibranium-plate",10} }, technology = "advanced-rifles-mk2" }
+    { order = "a", name = "rocket-launcher-mk1", icon_teir="teir-1", range = 80, cooldown = 60, ingredients = { {"rocket-launcher",2},{"complex-processing-unit",2} }, technology = "advanced-rifles-mk1" },
+    { order = "b", name = "rocket-launcher-mk2", icon_teir="teir-2", range = 160, cooldown = 40, ingredients = { {"rocket-launcher-mk1",2},{"vibranium-plate",10} }, technology = "advanced-rifles-mk2" }
 }
 
 rocket_projectile =

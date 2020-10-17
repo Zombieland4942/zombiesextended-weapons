@@ -15,10 +15,11 @@ for x,railgun in pairs(railgun_rifle) do
         },
         {
             type = "gun",
-            name = railgun.name,
-            icon = "__zombiesextended-weapons__/graphics/icons/" .. railgun.name .. ".png",
-            icon_size = 64, 
-            icon_mipmaps = 4,
+            name = railgun.name,            
+            icons ={
+                { icon = "__zombiesextended-weapons__/graphics/icons/" .. railgun.name .. ".png", icon_size = 64, icon_mipmaps = 4 },
+                { icon = "__zombiesextended-weapons__/graphics/icons/" .. railgun.icon_teir .. ".png", icon_size = 64 }
+            },        
             subgroup = "ds-railgun",
             order = railgun.order,
             attack_parameters =
