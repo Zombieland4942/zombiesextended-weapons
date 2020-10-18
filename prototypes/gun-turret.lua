@@ -7,19 +7,20 @@ for x, gun_turret in pairs(gun_turrets) do
     item = util.table.deepcopy(item_base)
 
     entity.name = gun_turret.name    
-    --entity.icon = "__zombiesextended-weapons__/graphics/icons/" .. gun_turret.name .. ".png"
-    entity.minable.result = gun_turret.name
-        
+    entity.icon = "__zombiesextended-weapons__/graphics/icons/" .. gun_turret.name .. ".png"
+    entity.minable.result = gun_turret.name        
     entity.attack_parameters.range = gun_turret.range
-    entity.attack_parameters.cooldown = 5
 
+    entity.base_picture.layers[1].filename = "__zombiesextended-weapons__/graphics/entity/" .. gun_turret.name .. "/gun-turret-base.png"
+    entity.base_picture.layers[1].hr_version.filename = "__zombiesextended-weapons__/graphics/entity/" .. gun_turret.name .. "/hr-gun-turret-base.png"
+    
     item.name = gun_turret.name
-    --item.icon = "__zombiesextended-weapons__/graphics/icons/" .. gun_turret.name .. ".png"
+    item.icon = "__zombiesextended-weapons__/graphics/icons/" .. gun_turret.name .. ".png"
     item.place_result = gun_turret.name
     item.order = gun_turret.order
-    item.subgroup = "ds-wall"
+    item.subgroup = "ds-turrets"
  
-    --table.insert(data.raw["technology"][gun_turret.technology].effects, { type = "unlock-recipe", recipe = gun_turret.name })
+    table.insert(data.raw["technology"][gun_turret.technology].effects, { type = "unlock-recipe", recipe = gun_turret.name })
 
     data:extend({ entity, item,
         {

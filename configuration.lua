@@ -22,6 +22,9 @@ technologies = {
     { order = "a-e-a", name = "radar-mk1", count = 100, time = 60, prerequisite = {}, ingredients = science_t2 },
     { order = "a-e-b", name = "radar-mk2", count = 200, time = 60, prerequisite = {"radar-mk1"}, ingredients = science_t3 },
     { order = "a-e-c", name = "radar-mk3", count = 400, time = 60, prerequisite = {"radar-mk2"}, ingredients = science_t4 },
+
+    { order = "a-f-a", name = "turrets-mk1", count = 200, time = 30, prerequisite = {"turrets","laser-turrets","flamethrower"}, ingredients = science_t3 },
+    { order = "a-f-b", name = "turrets-mk2", count = 400, time = 30, prerequisite = {"turrets-mk1"}, ingredients = science_t4 },
 }
 
 assault_rifle = 
@@ -81,8 +84,20 @@ rocket_ammo =
 
 gun_turrets =
 {
-    { order ="a", name = "gun-turrent-mk1", range = 25, ingredients = { {"gun-turret", 2},{"vibranium-plate",5} }, technology = "advanced-nuclear-bombs-mk1" },
-    { order ="a", name = "gun-turrent-mk2", range = 30, ingredients = { {"gun-turret-mk1", 2},{"vibranium-plate",10} }, technology = "advanced-nuclear-bombs-mk1" }
+    { order ="a-a", name = "gun-turret-mk1", range = 25, ingredients = { {"gun-turret", 2},{"vibranium-plate",5} }, technology = "turrets-mk1" },
+    { order ="a-b", name = "gun-turret-mk2", range = 35, ingredients = { {"gun-turret-mk1", 2},{"vibranium-plate",10} }, technology = "turrets-mk2" }
+}
+
+laser_turrets =
+{
+    { order ="b-a", name = "laser-turret-mk1", range = 30, damage_modifier = 3, ingredients = { {"laser-turret", 2},{"vibranium-plate",5} }, technology = "turrets-mk1" },
+    { order ="b-b", name = "laser-turret-mk2", range = 45, damage_modifier = 4, ingredients = { {"gun-turret-mk1", 2},{"vibranium-plate",10} }, technology = "turrets-mk2" }
+}
+
+flamethrower_turrets =
+{
+    { order ="c-a", name = "flamethrower-turret-mk1", min_range = 10, range = 38, damage_modifier = 1.5, fluid_consumption = 0.3, ingredients = { {"flamethrower-turret", 2},{"vibranium-plate",5} }, technology = "turrets-mk1" },
+    { order ="c-b", name = "flamethrower-turret-mk2", min_range = 15, range = 45, damage_modifier = 2, fluid_consumption = 0.4, ingredients = { {"flamethrower-turret-mk1", 2},{"vibranium-plate",10} }, technology = "turrets-mk2" }
 }
 
 walls =
