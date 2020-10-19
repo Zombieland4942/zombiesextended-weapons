@@ -1,4 +1,3 @@
-data.raw["radar"]["radar"].fast_replaceable_group = 'radar'
 
 local entity_base = util.table.deepcopy(data.raw["radar"]["radar"])
 local item_base = util.table.deepcopy(data.raw["item"]["radar"])
@@ -16,7 +15,8 @@ for x, radar in pairs(radars) do
     entity.max_distance_of_nearby_sector_revealed = radar.constant_range 
     entity.max_distance_of_sector_revealed = radar.max_range
     entity.fast_replaceable_group = 'radar'
-    
+    entity.next_upgrade = radar.next_upgrade
+
     entity.pictures.layers[1].filename = "__zombiesextended-weapons__/graphics/entity/" .. radar.name .. "/radar.png"
     entity.pictures.layers[1].hr_version.filename = "__zombiesextended-weapons__/graphics/entity/" .. radar.name .. "/hr-radar.png"
 

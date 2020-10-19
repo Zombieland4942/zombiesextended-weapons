@@ -12,6 +12,7 @@ for x, gate in pairs(gates) do
     entity.icon = "__zombiesextended-weapons__/graphics/icons/" .. gate.name .. ".png"
     entity.minable.result = gate.name
     entity.max_health = gate.health
+    entity.next_upgrade = gate.next_upgrade
 
     entity.vertical_animation.layers[1].filename = "__zombiesextended-weapons__/graphics/entity/" .. gate.name .. "/gate-vertical.png"
     entity.vertical_animation.layers[1].hr_version.filename = "__zombiesextended-weapons__/graphics/entity/" .. gate.name .. "/hr-gate-vertical.png"    

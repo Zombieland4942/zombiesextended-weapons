@@ -11,6 +11,7 @@ for x, wall in pairs(walls) do
     entity.icon = "__zombiesextended-weapons__/graphics/icons/" .. wall.name .. ".png"
     entity.minable.result = wall.name
     entity.max_health = wall.health
+    entity.next_upgrade = wall.next_upgrade
     
     entity.pictures.single.layers[1].filename = "__zombiesextended-weapons__/graphics/entity/" .. wall.name .. "/wall-single.png"
     entity.pictures.single.layers[1].hr_version.filename = "__zombiesextended-weapons__/graphics/entity/" .. wall.name .. "/hr-wall-single.png"

@@ -15,6 +15,7 @@ for x, flamethrower_turret in pairs(flamethrower_turrets) do
     entity.attack_parameters.fluid_consumption = flamethrower_turret.fluid_consumption
     entity.prepare_range = flamethrower_turret.range
     entity.attack_parameters.damage_modifier = flamethrower_turret.damage_modifier
+    entity.next_upgrade = flamethrower_turret.next_upgrade
 
     entity.base_picture.north.layers[1].filename = "__zombiesextended-weapons__/graphics/entity/" .. flamethrower_turret.name .. "/flamethrower-turret-base-north.png"
     entity.base_picture.north.layers[1].hr_version.filename = "__zombiesextended-weapons__/graphics/entity/" .. flamethrower_turret.name .. "/hr-flamethrower-turret-base-north.png"    

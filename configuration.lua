@@ -27,6 +27,20 @@ technologies = {
     { order = "a-f-b", name = "turrets-mk2", count = 400, time = 30, prerequisite = {"turrets-mk1"}, ingredients = science_t4 },
 }
 
+-- Need to mod some vanilla items in order for the upgrade planner to work
+data.raw["ammo-turret"]["gun-turret"].fast_replaceable_group = "turret"
+data.raw["ammo-turret"]["gun-turret"].next_upgrade = "gun-turret-mk1"
+data.raw["electric-turret"]["laser-turret"].fast_replaceable_group = "turret"
+data.raw["electric-turret"]["laser-turret"].next_upgrade = "laser-turret-mk1"
+data.raw["fluid-turret"]["flamethrower-turret"].fast_replaceable_group = "flame-turret"
+data.raw["fluid-turret"]["flamethrower-turret"].next_upgrade = "flamethrower-turret-mk1"
+data.raw["gate"]["gate"].fast_replaceable_group = "gate"
+data.raw["gate"]["gate"].next_upgrade = "gate-mk1"
+data.raw["wall"]["stone-wall"].fast_replaceable_group = "wall"
+data.raw["wall"]["stone-wall"].next_upgrade = "wall-mk1"
+data.raw["radar"]["radar"].fast_replaceable_group = "radar"
+data.raw["radar"]["radar"].next_upgrade = "radar-mk1"
+
 assault_rifle = 
 {
     { order = "a", name = "assault-rifle-mk1", icon_teir="teir-1", range = 40, cooldown = 10, ingredients = { {"submachine-gun",4} }, technology = "advanced-rifles-mk1" },
@@ -84,39 +98,39 @@ rocket_ammo =
 
 gun_turrets =
 {
-    { order ="a-a", name = "gun-turret-mk1", range = 25, ingredients = { {"gun-turret", 2},{"vibranium-plate",5} }, technology = "turrets-mk1" },
-    { order ="a-b", name = "gun-turret-mk2", range = 35, ingredients = { {"gun-turret-mk1", 2},{"vibranium-plate",10} }, technology = "turrets-mk2" }
+    { order ="a-a", name = "gun-turret-mk1", range = 25, next_upgrade = "gun-turret-mk2", ingredients = { {"gun-turret", 2},{"vibranium-plate",5} }, technology = "turrets-mk1" },
+    { order ="a-b", name = "gun-turret-mk2", range = 35, next_upgrade = "", ingredients = { {"gun-turret-mk1", 2},{"vibranium-plate",10} }, technology = "turrets-mk2" }
 }
 
 laser_turrets =
 {
-    { order ="b-a", name = "laser-turret-mk1", range = 30, damage_modifier = 3, ingredients = { {"laser-turret", 2},{"vibranium-plate",5} }, technology = "turrets-mk1" },
-    { order ="b-b", name = "laser-turret-mk2", range = 45, damage_modifier = 4, ingredients = { {"gun-turret-mk1", 2},{"vibranium-plate",10} }, technology = "turrets-mk2" }
+    { order ="b-a", name = "laser-turret-mk1", range = 30, damage_modifier = 3, next_upgrade = "laser-turret-mk2", ingredients = { {"laser-turret", 2},{"vibranium-plate",5} }, technology = "turrets-mk1" },
+    { order ="b-b", name = "laser-turret-mk2", range = 45, damage_modifier = 4, next_upgrade = "", ingredients = { {"gun-turret-mk1", 2},{"vibranium-plate",10} }, technology = "turrets-mk2" }
 }
 
 flamethrower_turrets =
 {
-    { order ="c-a", name = "flamethrower-turret-mk1", min_range = 10, range = 38, damage_modifier = 1.5, fluid_consumption = 0.3, ingredients = { {"flamethrower-turret", 2},{"vibranium-plate",5} }, technology = "turrets-mk1" },
-    { order ="c-b", name = "flamethrower-turret-mk2", min_range = 15, range = 45, damage_modifier = 2, fluid_consumption = 0.4, ingredients = { {"flamethrower-turret-mk1", 2},{"vibranium-plate",10} }, technology = "turrets-mk2" }
+    { order ="c-a", name = "flamethrower-turret-mk1", min_range = 10, range = 38, damage_modifier = 1.5, fluid_consumption = 0.3, next_upgrade = "flamethrower-turret-mk2", ingredients = { {"flamethrower-turret", 2},{"vibranium-plate",5} }, technology = "turrets-mk1" },
+    { order ="c-b", name = "flamethrower-turret-mk2", min_range = 15, range = 45, damage_modifier = 2, fluid_consumption = 0.4, next_upgrade = "", ingredients = { {"flamethrower-turret-mk1", 2},{"vibranium-plate",10} }, technology = "turrets-mk2" }
 }
 
 walls =
 {
-    { order = "a-a", name = "wall-mk1", health = 500, ingredients = { {"stone-wall",2},{"vibranium-plate",2} }, technology = "vibranium-walls-mk1" },
-    { order = "a-b", name = "wall-mk2", health = 1000, ingredients = { {"wall-mk1",2},{"vibranium-plate",2} }, technology = "vibranium-walls-mk2" },
-    { order = "a-c", name = "wall-mk3", health = 1500, ingredients = { {"wall-mk2",2},{"vibranium-plate",2} }, technology = "vibranium-walls-mk3" },
+    { order = "a-a", name = "wall-mk1", health = 500, next_upgrade = "wall-mk2", ingredients = { {"stone-wall",2},{"vibranium-plate",2} }, technology = "vibranium-walls-mk1" },
+    { order = "a-b", name = "wall-mk2", health = 1000, next_upgrade = "wall-mk3", ingredients = { {"wall-mk1",2},{"vibranium-plate",2} }, technology = "vibranium-walls-mk2" },
+    { order = "a-c", name = "wall-mk3", health = 1500, next_upgrade = "", ingredients = { {"wall-mk2",2},{"vibranium-plate",2} }, technology = "vibranium-walls-mk3" },
 }
 
 gates =
 {
-    { order = "b-a", name = "gate-mk1", health = 500, ingredients = { {"gate",2},{"vibranium-plate",2} }, technology = "vibranium-walls-mk1" },
-    { order = "b-b", name = "gate-mk2", health = 1000, ingredients = { {"gate-mk1",2},{"vibranium-plate",2} }, technology = "vibranium-walls-mk2" },
-    { order = "b-c", name = "gate-mk3", health = 1500, ingredients = { {"gate-mk2",2},{"vibranium-plate",2} }, technology = "vibranium-walls-mk3" },
+    { order = "b-a", name = "gate-mk1", health = 500, next_upgrade = "gate-mk2", ingredients = { {"gate",2},{"vibranium-plate",2} }, technology = "vibranium-walls-mk1" },
+    { order = "b-b", name = "gate-mk2", health = 1000, next_upgrade = "gate-mk3", ingredients = { {"gate-mk1",2},{"vibranium-plate",2} }, technology = "vibranium-walls-mk2" },
+    { order = "b-c", name = "gate-mk3", health = 1500, next_upgrade = "", ingredients = { {"gate-mk2",2},{"vibranium-plate",2} }, technology = "vibranium-walls-mk3" },
 }
 
 radars =
 {
-    { order = "c-a", name = "radar-mk1", health = 300, energy_con_kw = 400, constant_range = 4, max_range = 16, ingredients = { {"radar",2} }, technology = "radar-mk1" },
-    { order = "c-b", name = "radar-mk2", health = 350, energy_con_kw = 500, constant_range = 6, max_range = 32, ingredients = { {"radar-mk1",2},{"vibranium-plate",5} }, technology = "radar-mk2" },
-    { order = "c-c", name = "radar-mk3", health = 400, energy_con_kw = 600, constant_range = 8, max_range = 64, ingredients = { {"radar-mk2",2},{"vibranium-plate",10} }, technology = "radar-mk3" },
+    { order = "c-a", name = "radar-mk1", health = 300, energy_con_kw = 400, constant_range = 4, max_range = 16, next_upgrade = "radar-mk2", ingredients = { {"radar",2} }, technology = "radar-mk1" },
+    { order = "c-b", name = "radar-mk2", health = 350, energy_con_kw = 500, constant_range = 6, max_range = 32, next_upgrade = "radar-mk3", ingredients = { {"radar-mk1",2},{"vibranium-plate",5} }, technology = "radar-mk2" },
+    { order = "c-c", name = "radar-mk3", health = 400, energy_con_kw = 600, constant_range = 8, max_range = 64, next_upgrade = "", ingredients = { {"radar-mk2",2},{"vibranium-plate",10} }, technology = "radar-mk3" },
 }
