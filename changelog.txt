@@ -2,6 +2,9 @@
 Version: 1.0.5
 Date: ????
   Changes:
+    - Merged MK1 Guns and Ammo Tech
+    - Merged MK2 Guns and Ammo Tech
+    - MK3 remains its own Tech.
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.4
 Date: 2020-10-19

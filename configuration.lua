@@ -6,12 +6,10 @@ local science_t5 = {{"automation-science-pack",1},{"logistic-science-pack",1},{"
 local science_t6 = {{"automation-science-pack",1},{"logistic-science-pack",1},{"chemical-science-pack",1},{"production-science-pack",1},{"utility-science-pack",1},{"space-science-pack",1}}
 
 technologies = {
-    { order = "a-a-a", name = "advanced-rifles-mk1", count = 600, time = 60, prerequisite = {"military-3"}, ingredients = science_t4 },
-    { order = "a-a-b", name = "advanced-rifles-mk2", count = 600, time = 60, prerequisite = {"advanced-rifles-mk1"}, ingredients = science_t5 },
+    { order = "a-a-a", name = "advanced-rifles-mk1", count = 1200, time = 60, prerequisite = {"military-3"}, ingredients = science_t4 },
+    { order = "a-a-b", name = "advanced-rifles-mk2", count = 1600, time = 60, prerequisite = {"advanced-rifles-mk1"}, ingredients = science_t5 },
 
-    { order = "a-b-a", name = "advanced-ammo-mk1", count = 600, time = 60, prerequisite = {"military-3","advanced-rifles-mk1"}, ingredients = science_t4 },
-    { order = "a-b-b", name = "advanced-ammo-mk2", count = 800, time = 60, prerequisite = {"advanced-ammo-mk1","advanced-rifles-mk2"}, ingredients = science_t5 },
-    { order = "a-b-c", name = "advanced-ammo-mk3", count = 1000, time = 60, prerequisite = {"advanced-ammo-mk2"}, ingredients = science_t5 },
+    { order = "a-b-c", name = "advanced-ammo-mk3", count = 1000, time = 60, prerequisite = {"advanced-rifles-mk2"}, ingredients = science_t5 },
 
     { order = "a-c-a", name = "advanced-nuclear-bombs-mk1", count = 10000, time = 60, prerequisite = {"atomic-bomb"}, ingredients = science_t6 },
     
@@ -49,8 +47,8 @@ assault_rifle =
 
 assault_rifle_ammo = 
 {
-    { order = "c", name = "assault-ammo-mk1", damage_amount = 20, ingredients = { {"piercing-rounds-magazine",5} }, technology = "advanced-ammo-mk1" },
-    { order = "d", name = "assault-ammo-mk2", damage_amount = 40, ingredients = { {"assault-ammo-mk1",5} }, technology = "advanced-ammo-mk2" },
+    { order = "c", name = "assault-ammo-mk1", damage_amount = 20, ingredients = { {"piercing-rounds-magazine",5} }, technology = "advanced-rifles-mk1" },
+    { order = "d", name = "assault-ammo-mk2", damage_amount = 40, ingredients = { {"assault-ammo-mk1",5} }, technology = "advanced-rifles-mk2" },
     { order = "e", name = "assault-ammo-mk3", damage_amount = 80, ingredients = { {"assault-ammo-mk2",5},{"vibranium-plate",5} }, technology = "advanced-ammo-mk3" }
 }
 
@@ -62,8 +60,8 @@ sniper_rifle =
 
 sniper_rifle_ammo = 
 {
-    { order = "c", name = "sniper-ammo-mk1", damage_amount = 40, ingredients = { {"piercing-rounds-magazine",5} }, technology = "advanced-ammo-mk1" },
-    { order = "d", name = "sniper-ammo-mk2", damage_amount = 80, ingredients = { {"sniper-ammo-mk1",5} }, technology = "advanced-ammo-mk2" },
+    { order = "c", name = "sniper-ammo-mk1", damage_amount = 40, ingredients = { {"piercing-rounds-magazine",5} }, technology = "advanced-rifles-mk1" },
+    { order = "d", name = "sniper-ammo-mk2", damage_amount = 80, ingredients = { {"sniper-ammo-mk1",5} }, technology = "advanced-rifles-mk2" },
     { order = "e", name = "sniper-ammo-mk3", damage_amount = 160, ingredients = { {"sniper-ammo-mk2",5},{"vibranium-plate",5} }, technology = "advanced-ammo-mk3" }
 }
 
@@ -75,8 +73,8 @@ railgun_rifle =
 
 railgun_rifle_ammo = 
 {
-    { order = "c", name = "railgun-ammo-mk1", range = 25, width = 4, damage_amount = 300, ingredients = { {"uranium-rounds-magazine",5} }, technology = "advanced-ammo-mk1" },
-    { order = "d", name = "railgun-ammo-mk2", range = 50, width = 12, damage_amount = 600, ingredients = { {"railgun-ammo-mk1",5},{"vibranium-plate",5} }, technology = "advanced-ammo-mk2" },
+    { order = "c", name = "railgun-ammo-mk1", range = 25, width = 4, damage_amount = 300, ingredients = { {"uranium-rounds-magazine",5} }, technology = "advanced-rifles-mk1" },
+    { order = "d", name = "railgun-ammo-mk2", range = 50, width = 12, damage_amount = 600, ingredients = { {"railgun-ammo-mk1",5},{"vibranium-plate",5} }, technology = "advanced-rifles-mk2" },
     { order = "e", name = "railgun-ammo-mk3", range = 100, width = 20, damage_amount = 1200, ingredients = { {"railgun-ammo-mk2",5},{"vibranium-plate",10} }, technology = "advanced-ammo-mk3" }
 }
 
