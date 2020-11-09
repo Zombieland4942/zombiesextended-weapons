@@ -1,7 +1,9 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.6
-Date: ????
+Date: 2020-11-09
   Changes:
+    - Adjusted Antimatter Bomb Recipe to require Plutonium
+    - ZomebiesExtended Weapons now requires the ZomebiesExtended Power Mod
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.5
 Date: 2020-11-08

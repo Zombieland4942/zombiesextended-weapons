@@ -91,7 +91,7 @@ rocket_projectile =
 
 rocket_ammo =
 {
-    { order ="c", name = "antimatter-nuke-mk1", projectile = "antimatter-nuke-projectile-mk1", ingredients = { {"atomic-bomb", 4},{"vibranium-plate",10},{"complex-processing-unit",10} }, technology = "advanced-nuclear-bombs-mk1" }
+    { order ="c", name = "antimatter-nuke-mk1", projectile = "antimatter-nuke-projectile-mk1", ingredients = { {"atomic-bomb", 4},{"nuclear-fuel-mk3", 5},{"vibranium-plate",10},{"complex-processing-unit",10},{"plutonium",100} }, technology = "advanced-nuclear-bombs-mk1" }
 }
 
 gun_turrets =
