@@ -103,7 +103,7 @@ gun_turrets =
 laser_turrets =
 {
     { order ="b-a", name = "laser-turret-mk1", range = 30, damage_modifier = 3, next_upgrade = "laser-turret-mk2", ingredients = { {"laser-turret", 2},{"vibranium-plate",5} }, technology = "turrets-mk1" },
-    { order ="b-b", name = "laser-turret-mk2", range = 45, damage_modifier = 4, next_upgrade = "", ingredients = { {"gun-turret-mk1", 2},{"vibranium-plate",10} }, technology = "turrets-mk2" }
+    { order ="b-b", name = "laser-turret-mk2", range = 45, damage_modifier = 4, next_upgrade = "", ingredients = { {"laser-turret-mk1", 2},{"vibranium-plate",10} }, technology = "turrets-mk2" }
 }
 
 flamethrower_turrets =
