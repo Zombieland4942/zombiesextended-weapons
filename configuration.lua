@@ -13,7 +13,7 @@ technologies = {
 
     { order = "a-c-a", name = "advanced-nuclear-bombs-mk1", count = 10000, time = 60, prerequisite = {"atomic-bomb"}, ingredients = science_t6 },
     
-    { order = "a-d-a", name = "vibranium-walls-mk1", count = 200, time = 30, prerequisite = {"stone-walls"}, ingredients = science_t3 },
+    { order = "a-d-a", name = "vibranium-walls-mk1", count = 200, time = 30, prerequisite = {"stone-wall"}, ingredients = science_t3 },
     { order = "a-d-b", name = "vibranium-walls-mk2", count = 200, time = 30, prerequisite = {"vibranium-walls-mk1"}, ingredients = science_t4 },
     { order = "a-d-c", name = "vibranium-walls-mk3", count = 200, time = 30, prerequisite = {"vibranium-walls-mk2"}, ingredients = science_t5 },
 
@@ -21,7 +21,7 @@ technologies = {
     { order = "a-e-b", name = "radar-mk2", count = 200, time = 60, prerequisite = {"radar-mk1"}, ingredients = science_t3 },
     { order = "a-e-c", name = "radar-mk3", count = 400, time = 60, prerequisite = {"radar-mk2"}, ingredients = science_t4 },
 
-    { order = "a-f-a", name = "turrets-mk1", count = 200, time = 30, prerequisite = {"turrets","laser-turrets","flamethrower"}, ingredients = science_t3 },
+    { order = "a-f-a", name = "turrets-mk1", count = 200, time = 30, prerequisite = {"gun-turret","laser-turret","flamethrower"}, ingredients = science_t3 },
     { order = "a-f-b", name = "turrets-mk2", count = 400, time = 30, prerequisite = {"turrets-mk1"}, ingredients = science_t4 },
 }
 
