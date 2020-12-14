@@ -2,27 +2,28 @@ local science_t1 = {{"automation-science-pack",1}}
 local science_t2 = {{"automation-science-pack",1},{"logistic-science-pack",1}}
 local science_t3 = {{"automation-science-pack",1},{"logistic-science-pack",1},{"chemical-science-pack",1}}
 local science_t4 = {{"automation-science-pack",1},{"logistic-science-pack",1},{"chemical-science-pack",1},{"production-science-pack",1}}
-local science_t5 = {{"automation-science-pack",1},{"logistic-science-pack",1},{"chemical-science-pack",1},{"production-science-pack",1},{"utility-science-pack",1}}
-local science_t6 = {{"automation-science-pack",1},{"logistic-science-pack",1},{"chemical-science-pack",1},{"production-science-pack",1},{"utility-science-pack",1},{"space-science-pack",1}}
+local science_t5 = {{"automation-science-pack",1},{"logistic-science-pack",1},{"chemical-science-pack",1},{"utility-science-pack",1}}
+local science_t6 = {{"automation-science-pack",1},{"logistic-science-pack",1},{"chemical-science-pack",1},{"production-science-pack",1},{"utility-science-pack",1}}
+local science_t7 = {{"automation-science-pack",1},{"logistic-science-pack",1},{"chemical-science-pack",1},{"production-science-pack",1},{"utility-science-pack",1},{"space-science-pack",1}}
 
 technologies = {
-    { order = "a-a-a", name = "advanced-rifles-mk1", count = 1200, time = 60, prerequisite = {"military-3"}, ingredients = science_t4 },
+    { order = "a-a-a", name = "advanced-rifles-mk1", count = 1200, time = 60, prerequisite = {"military-3"}, ingredients = science_t3 },
     { order = "a-a-b", name = "advanced-rifles-mk2", count = 1600, time = 60, prerequisite = {"advanced-rifles-mk1"}, ingredients = science_t5 },
 
-    { order = "a-b-c", name = "advanced-ammo-mk3", count = 1000, time = 60, prerequisite = {"advanced-rifles-mk2"}, ingredients = science_t5 },
+    { order = "a-b-c", name = "advanced-ammo-mk3", count = 1000, time = 60, prerequisite = {"advanced-rifles-mk2"}, ingredients = science_t6 },
 
-    { order = "a-c-a", name = "advanced-nuclear-bombs-mk1", count = 10000, time = 60, prerequisite = {"atomic-bomb"}, ingredients = science_t6 },
+    { order = "a-c-a", name = "advanced-nuclear-bombs-mk1", count = 10000, time = 60, prerequisite = {"atomic-bomb"}, ingredients = science_t7 },
     
     { order = "a-d-a", name = "vibranium-walls-mk1", count = 200, time = 30, prerequisite = {"stone-wall"}, ingredients = science_t3 },
-    { order = "a-d-b", name = "vibranium-walls-mk2", count = 200, time = 30, prerequisite = {"vibranium-walls-mk1"}, ingredients = science_t4 },
-    { order = "a-d-c", name = "vibranium-walls-mk3", count = 200, time = 30, prerequisite = {"vibranium-walls-mk2"}, ingredients = science_t5 },
+    { order = "a-d-b", name = "vibranium-walls-mk2", count = 200, time = 30, prerequisite = {"vibranium-walls-mk1"}, ingredients = science_t5 },
+    { order = "a-d-c", name = "vibranium-walls-mk3", count = 200, time = 30, prerequisite = {"vibranium-walls-mk2"}, ingredients = science_t6 },
 
     { order = "a-e-a", name = "radar-mk1", count = 100, time = 60, prerequisite = {}, ingredients = science_t2 },
     { order = "a-e-b", name = "radar-mk2", count = 200, time = 60, prerequisite = {"radar-mk1"}, ingredients = science_t3 },
-    { order = "a-e-c", name = "radar-mk3", count = 400, time = 60, prerequisite = {"radar-mk2"}, ingredients = science_t4 },
+    { order = "a-e-c", name = "radar-mk3", count = 400, time = 60, prerequisite = {"radar-mk2"}, ingredients = science_t5 },
 
     { order = "a-f-a", name = "turrets-mk1", count = 200, time = 30, prerequisite = {"gun-turret","laser-turret","flamethrower"}, ingredients = science_t3 },
-    { order = "a-f-b", name = "turrets-mk2", count = 400, time = 30, prerequisite = {"turrets-mk1"}, ingredients = science_t4 },
+    { order = "a-f-b", name = "turrets-mk2", count = 400, time = 30, prerequisite = {"turrets-mk1"}, ingredients = science_t5 },
 }
 
 -- Need to mod some vanilla items in order for the upgrade planner to work
@@ -114,16 +115,16 @@ flamethrower_turrets =
 
 walls =
 {
-    { order = "a-a", name = "wall-mk1", health = 500, next_upgrade = "wall-mk2", ingredients = { {"stone-wall",2},{"vibranium-plate",2} }, technology = "vibranium-walls-mk1" },
-    { order = "a-b", name = "wall-mk2", health = 1000, next_upgrade = "wall-mk3", ingredients = { {"wall-mk1",2},{"vibranium-plate",2} }, technology = "vibranium-walls-mk2" },
-    { order = "a-c", name = "wall-mk3", health = 1500, next_upgrade = "", ingredients = { {"wall-mk2",2},{"vibranium-plate",2} }, technology = "vibranium-walls-mk3" },
+    { order = "a-a", name = "wall-mk1", health = 500, next_upgrade = "wall-mk2", ingredients = { {"stone-wall",2},{"vibranium-plate",1} }, technology = "vibranium-walls-mk1" },
+    { order = "a-b", name = "wall-mk2", health = 1000, next_upgrade = "wall-mk3", ingredients = { {"wall-mk1",2},{"vibranium-plate",1} }, technology = "vibranium-walls-mk2" },
+    { order = "a-c", name = "wall-mk3", health = 1500, next_upgrade = "", ingredients = { {"wall-mk2",2},{"vibranium-plate",1} }, technology = "vibranium-walls-mk3" },
 }
 
 gates =
 {
-    { order = "b-a", name = "gate-mk1", health = 500, next_upgrade = "gate-mk2", ingredients = { {"gate",2},{"vibranium-plate",2} }, technology = "vibranium-walls-mk1" },
-    { order = "b-b", name = "gate-mk2", health = 1000, next_upgrade = "gate-mk3", ingredients = { {"gate-mk1",2},{"vibranium-plate",2} }, technology = "vibranium-walls-mk2" },
-    { order = "b-c", name = "gate-mk3", health = 1500, next_upgrade = "", ingredients = { {"gate-mk2",2},{"vibranium-plate",2} }, technology = "vibranium-walls-mk3" },
+    { order = "b-a", name = "gate-mk1", health = 500, next_upgrade = "gate-mk2", ingredients = { {"gate",2},{"vibranium-plate",1} }, technology = "vibranium-walls-mk1" },
+    { order = "b-b", name = "gate-mk2", health = 1000, next_upgrade = "gate-mk3", ingredients = { {"gate-mk1",2},{"vibranium-plate",1} }, technology = "vibranium-walls-mk2" },
+    { order = "b-c", name = "gate-mk3", health = 1500, next_upgrade = "", ingredients = { {"gate-mk2",2},{"vibranium-plate",1} }, technology = "vibranium-walls-mk3" },
 }
 
 radars =
