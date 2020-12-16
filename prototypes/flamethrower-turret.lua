@@ -13,6 +13,7 @@ for x, flamethrower_turret in pairs(flamethrower_turrets) do
     entity.attack_parameters.min_range = flamethrower_turret.min_range
     entity.attack_parameters.range = flamethrower_turret.range
     entity.attack_parameters.fluid_consumption = flamethrower_turret.fluid_consumption
+    entity.attack_parameters.cooldown = flamethrower_turret.cooldown
     entity.prepare_range = flamethrower_turret.range
     entity.attack_parameters.damage_modifier = flamethrower_turret.damage_modifier
     entity.next_upgrade = flamethrower_turret.next_upgrade

@@ -14,6 +14,7 @@ for x, laser_turret in pairs(laser_turrets) do
     entity.attack_parameters.damage_modifier = laser_turret.damage_modifier
     entity.attack_parameters.ammo_type.action.action_delivery.max_length = laser_turret.range
     entity.attack_parameters.ammo_type.energy_consumption = laser_turret.energy_consumption
+    entity.attack_parameters.cooldown = laser_turret.cooldown
 
     entity.base_picture.layers[1].filename = "__zombiesextended-weapons__/graphics/entity/" .. laser_turret.name .. "/laser-turret-base.png"
     entity.base_picture.layers[1].hr_version.filename = "__zombiesextended-weapons__/graphics/entity/" .. laser_turret.name .. "/hr-laser-turret-base.png"

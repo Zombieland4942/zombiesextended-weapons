@@ -97,20 +97,20 @@ rocket_ammo =
 
 gun_turrets =
 {
-    { order ="a-a", name = "gun-turret-mk1", range = 25, next_upgrade = "gun-turret-mk2", ingredients = { {"gun-turret", 2},{"vibranium-plate",5} }, technology = "turrets-mk1" },
-    { order ="a-b", name = "gun-turret-mk2", range = 35, next_upgrade = "", ingredients = { {"gun-turret-mk1", 2},{"vibranium-plate",10} }, technology = "turrets-mk2" }
+    { order ="a-a", name = "gun-turret-mk1", range = 25, cooldown = 5, damage_modifier = 1.5, next_upgrade = "gun-turret-mk2", ingredients = { {"gun-turret", 2},{"vibranium-plate",5} }, technology = "turrets-mk1" },
+    { order ="a-b", name = "gun-turret-mk2", range = 35, cooldown = 4, damage_modifier = 2, next_upgrade = "", ingredients = { {"gun-turret-mk1", 2},{"vibranium-plate",10} }, technology = "turrets-mk2" }
 }
 
 laser_turrets =
 {
-    { order ="b-a", name = "laser-turret-mk1", range = 30, damage_modifier = 3, energy_consumption = "1000kJ", next_upgrade = "laser-turret-mk2", ingredients = { {"laser-turret", 2},{"vibranium-plate",5} }, technology = "turrets-mk1" },
-    { order ="b-b", name = "laser-turret-mk2", range = 45, damage_modifier = 4, energy_consumption = "1200kJ", next_upgrade = "", ingredients = { {"laser-turret-mk1", 2},{"vibranium-plate",10} }, technology = "turrets-mk2" }
+    { order ="b-a", name = "laser-turret-mk1", range = 30, cooldown = 30, damage_modifier = 3, energy_consumption = "1000kJ", next_upgrade = "laser-turret-mk2", ingredients = { {"laser-turret", 2},{"vibranium-plate",5} }, technology = "turrets-mk1" },
+    { order ="b-b", name = "laser-turret-mk2", range = 45, cooldown = 20, damage_modifier = 4, energy_consumption = "1200kJ", next_upgrade = "", ingredients = { {"laser-turret-mk1", 2},{"vibranium-plate",10} }, technology = "turrets-mk2" }
 }
 
 flamethrower_turrets =
 {
-    { order ="c-a", name = "flamethrower-turret-mk1", min_range = 10, range = 38, damage_modifier = 1.5, fluid_consumption = 0.3, next_upgrade = "flamethrower-turret-mk2", ingredients = { {"flamethrower-turret", 2},{"vibranium-plate",5} }, technology = "turrets-mk1" },
-    { order ="c-b", name = "flamethrower-turret-mk2", min_range = 15, range = 45, damage_modifier = 2, fluid_consumption = 0.4, next_upgrade = "", ingredients = { {"flamethrower-turret-mk1", 2},{"vibranium-plate",10} }, technology = "turrets-mk2" }
+    { order ="c-a", name = "flamethrower-turret-mk1", min_range = 10, range = 38, cooldown = 3, damage_modifier = 1.5, fluid_consumption = 0.3, next_upgrade = "flamethrower-turret-mk2", ingredients = { {"flamethrower-turret", 2},{"vibranium-plate",5} }, technology = "turrets-mk1" },
+    { order ="c-b", name = "flamethrower-turret-mk2", min_range = 15, range = 45, cooldown = 2, damage_modifier = 2, fluid_consumption = 0.4, next_upgrade = "", ingredients = { {"flamethrower-turret-mk1", 2},{"vibranium-plate",10} }, technology = "turrets-mk2" }
 }
 
 walls =

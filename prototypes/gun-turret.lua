@@ -10,6 +10,8 @@ for x, gun_turret in pairs(gun_turrets) do
     entity.icon = "__zombiesextended-weapons__/graphics/icons/" .. gun_turret.name .. ".png"
     entity.minable.result = gun_turret.name        
     entity.attack_parameters.range = gun_turret.range
+    entity.attack_parameters.cooldown = gun_turret.cooldown
+    entity.attack_parameters.damage_modifier = gun_turret.damage_modifier
     entity.base_picture.layers[1].filename = "__zombiesextended-weapons__/graphics/entity/" .. gun_turret.name .. "/gun-turret-base.png"
     entity.base_picture.layers[1].hr_version.filename = "__zombiesextended-weapons__/graphics/entity/" .. gun_turret.name .. "/hr-gun-turret-base.png"
     entity.next_upgrade = gun_turret.next_upgrade
