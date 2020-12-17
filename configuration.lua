@@ -48,9 +48,9 @@ assault_rifle =
 
 assault_rifle_ammo = 
 {
-    { order = "c", name = "assault-ammo-mk1", damage_amount = 20, ingredients = { {"piercing-rounds-magazine",5} }, technology = "advanced-rifles-mk1" },
-    { order = "d", name = "assault-ammo-mk2", damage_amount = 40, ingredients = { {"assault-ammo-mk1",5} }, technology = "advanced-rifles-mk2" },
-    { order = "e", name = "assault-ammo-mk3", damage_amount = 80, ingredients = { {"assault-ammo-mk2",5},{"vibranium-plate",5} }, technology = "advanced-ammo-mk3" }
+    { order = "c", name = "assault-ammo-mk1", damage_amount = 20, ingredients = { {"piercing-rounds-magazine",2} }, technology = "advanced-rifles-mk1" },
+    { order = "d", name = "assault-ammo-mk2", damage_amount = 40, ingredients = { {"assault-ammo-mk1",2},{"vibranium-plate",5} }, technology = "advanced-rifles-mk2" },
+    { order = "e", name = "assault-ammo-mk3", damage_amount = 80, ingredients = { {"assault-ammo-mk2",2},{"vibranium-plate",5} }, technology = "advanced-ammo-mk3" }
 }
 
 sniper_rifle = 

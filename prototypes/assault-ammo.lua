@@ -56,3 +56,19 @@ for x,ammo in pairs(assault_rifle_ammo) do
         }
     )
 end
+
+-- Hacked in an Alt Recipe, TODO Make this more not crap
+data:extend(
+    {
+        {
+            type = "recipe",
+            name = "alt-assault-ammo-mk2",
+            enabled = false,
+            energy_required = 5,
+            ingredients = { {"uranium-rounds-magazine",2} },
+            result = "assault-ammo-mk2"
+        }
+    }
+)
+
+table.insert(data.raw["technology"]["advanced-rifles-mk2"].effects, { type = "unlock-recipe", recipe = "alt-assault-ammo-mk2"})
