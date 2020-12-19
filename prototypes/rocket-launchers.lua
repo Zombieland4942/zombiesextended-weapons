@@ -1,3 +1,8 @@
+local subgroup = "gun"
+
+if settings.startup["zombies-use-seperate-tab"].value == true then        
+    subgroup = "ds-rockets"
+end
 
 for x,launcher in pairs(rocket_launcher) do
      
@@ -20,8 +25,8 @@ for x,launcher in pairs(rocket_launcher) do
                     { icon = "__zombiesextended-weapons__/graphics/icons/" .. launcher.name .. ".png", icon_size = 64, icon_mipmaps = 4 },
                     { icon = "__zombiesextended-weapons__/graphics/icons/" .. launcher.icon_teir .. ".png", icon_size = 64 }
                 },                
-                subgroup = "ds-rockets",
-                order = launcher.order,
+                subgroup = subgroup,
+                order = "d[rocket-launcher]-" .. launcher.order,
                 attack_parameters =
                 {
                     type = "projectile",

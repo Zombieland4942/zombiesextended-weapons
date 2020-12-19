@@ -42,47 +42,34 @@ data.raw["radar"]["radar"].next_upgrade = "radar-mk1"
 
 assault_rifle = 
 {
-    { order = "a", name = "assault-rifle-mk1", icon_teir="teir-1", range = 40, cooldown = 10, ingredients = { {"submachine-gun",4} }, technology = "advanced-rifles-mk1" },
-    { order = "b", name = "assault-rifle-mk2", icon_teir="teir-2", range = 80, cooldown = 6, ingredients = { {"assault-rifle-mk1",2},{"vibranium-plate",20} }, technology = "advanced-rifles-mk2" }
-}
-
-assault_rifle_ammo = 
-{
-    { order = "c", name = "assault-ammo-mk1", damage_amount = 20, ingredients = { {"piercing-rounds-magazine",3} }, technology = "advanced-rifles-mk1" },
-    { order = "d", name = "assault-ammo-mk2", damage_amount = 40, ingredients = { {"assault-ammo-mk1",3},{"vibranium-plate",5} }, technology = "advanced-rifles-mk2" },
-    { order = "e", name = "assault-ammo-mk3", damage_amount = 80, ingredients = { {"assault-ammo-mk2",3},{"vibranium-plate",5} }, technology = "advanced-ammo-mk3" }
+    { order = "c-a", name = "assault-rifle-mk1", icon_teir="teir-1", range = 40, cooldown = 10, ingredients = { {"submachine-gun",4} }, technology = "advanced-rifles-mk1" },
+    { order = "c-b", name = "assault-rifle-mk2", icon_teir="teir-2", range = 80, cooldown = 6, ingredients = { {"assault-rifle-mk1",2},{"vibranium-plate",20} }, technology = "advanced-rifles-mk2" }
 }
 
 sniper_rifle = 
 {
-    { order = "a", name = "sniper-rifle-mk1", icon_teir="teir-1", range = 70, cooldown = 20, ingredients = { {"assault-rifle-mk1",2} }, technology = "advanced-rifles-mk1" },
-    { order = "b", name = "sniper-rifle-mk2", icon_teir="teir-2", range = 140, cooldown = 15, ingredients = { {"sniper-rifle-mk1",2},{"vibranium-plate",20} }, technology = "advanced-rifles-mk2" }
-}
-
-sniper_rifle_ammo = 
-{
-    { order = "c", name = "sniper-ammo-mk1", damage_amount = 40, ingredients = { {"piercing-rounds-magazine",5} }, technology = "advanced-rifles-mk1" },
-    { order = "d", name = "sniper-ammo-mk2", damage_amount = 80, ingredients = { {"sniper-ammo-mk1",5} }, technology = "advanced-rifles-mk2" },
-    { order = "e", name = "sniper-ammo-mk3", damage_amount = 160, ingredients = { {"sniper-ammo-mk2",5},{"vibranium-plate",5} }, technology = "advanced-ammo-mk3" }
-}
-
-railgun_rifle = 
-{
-    { order = "a", name = "railgun-rifle-mk1", icon_teir="teir-1", range = 50, cooldown = 240, ingredients = { {"assault-rifle-mk1",1},{"complex-processing-unit",5} }, technology = "advanced-rifles-mk1" },
-    { order = "b", name = "railgun-rifle-mk2", icon_teir="teir-2", range = 100, cooldown = 180, ingredients = { {"railgun-rifle-mk1",1},{"vibranium-plate",5} }, technology = "advanced-rifles-mk2" }
-}
-
-railgun_rifle_ammo = 
-{
-    { order = "c", name = "railgun-ammo-mk1", range = 25, width = 4, damage_amount = 300, ingredients = { {"uranium-rounds-magazine",5} }, technology = "advanced-rifles-mk1" },
-    { order = "d", name = "railgun-ammo-mk2", range = 50, width = 12, damage_amount = 600, ingredients = { {"railgun-ammo-mk1",5},{"vibranium-plate",5} }, technology = "advanced-rifles-mk2" },
-    { order = "e", name = "railgun-ammo-mk3", range = 100, width = 20, damage_amount = 1200, ingredients = { {"railgun-ammo-mk2",5},{"vibranium-plate",10} }, technology = "advanced-ammo-mk3" }
+    { order = "d-a", name = "sniper-rifle-mk1", icon_teir="teir-1", range = 70, cooldown = 20, ingredients = { {"assault-rifle-mk1",2} }, technology = "advanced-rifles-mk1" },
+    { order = "d-b", name = "sniper-rifle-mk2", icon_teir="teir-2", range = 140, cooldown = 15, ingredients = { {"sniper-rifle-mk1",2},{"vibranium-plate",20} }, technology = "advanced-rifles-mk2" }
 }
 
 rocket_launcher = 
 {
     { order = "a", name = "rocket-launcher-mk1", icon_teir="teir-1", range = 80, cooldown = 60, ingredients = { {"rocket-launcher",2},{"complex-processing-unit",2} }, technology = "advanced-rifles-mk1" },
     { order = "b", name = "rocket-launcher-mk2", icon_teir="teir-2", range = 160, cooldown = 40, ingredients = { {"rocket-launcher-mk1",2},{"vibranium-plate",10} }, technology = "advanced-rifles-mk2" }
+}
+
+assault_rifle_ammo = 
+{
+    { order = "c-a", name = "assault-ammo-mk1", damage_amount = 20, ingredients = { {"piercing-rounds-magazine",3} }, technology = "advanced-rifles-mk1" },
+    { order = "e-b", name = "assault-ammo-mk2", damage_amount = 40, ingredients = { {"assault-ammo-mk1",3},{"vibranium-plate",5} }, technology = "advanced-rifles-mk2" },
+    { order = "e-c", name = "assault-ammo-mk3", damage_amount = 80, ingredients = { {"assault-ammo-mk2",3},{"vibranium-plate",5} }, technology = "advanced-ammo-mk3" }
+}
+
+sniper_rifle_ammo = 
+{
+    { order = "f-a", name = "sniper-ammo-mk1", damage_amount = 40, ingredients = { {"piercing-rounds-magazine",5} }, technology = "advanced-rifles-mk1" },
+    { order = "f-a", name = "sniper-ammo-mk2", damage_amount = 80, ingredients = { {"sniper-ammo-mk1",5} }, technology = "advanced-rifles-mk2" },
+    { order = "f-a", name = "sniper-ammo-mk3", damage_amount = 160, ingredients = { {"sniper-ammo-mk2",5},{"vibranium-plate",5} }, technology = "advanced-ammo-mk3" }
 }
 
 rocket_projectile =
@@ -92,25 +79,25 @@ rocket_projectile =
 
 rocket_ammo =
 {
-    { order ="c", name = "antimatter-nuke-mk1", projectile = "antimatter-nuke-projectile-mk1", ingredients = { {"atomic-bomb", 4},{"nuclear-fuel-mk3", 5},{"vibranium-plate",10},{"complex-processing-unit",10},{"plutonium",100} }, technology = "advanced-nuclear-bombs-mk1" }
+    { order ="d", name = "antimatter-nuke-mk1", projectile = "antimatter-nuke-projectile-mk1", ingredients = { {"atomic-bomb", 4},{"nuclear-fuel-mk3", 5},{"vibranium-plate",10},{"complex-processing-unit",10},{"plutonium",100} }, technology = "advanced-nuclear-bombs-mk1" }
 }
 
 gun_turrets =
 {
-    { order ="a-a", name = "gun-turret-mk1", range = 25, cooldown = 5, damage_modifier = 1.5, next_upgrade = "gun-turret-mk2", ingredients = { {"gun-turret", 2},{"vibranium-plate",5} }, technology = "turrets-mk1" },
-    { order ="a-b", name = "gun-turret-mk2", range = 35, cooldown = 4, damage_modifier = 2, next_upgrade = "", ingredients = { {"gun-turret-mk1", 2},{"vibranium-plate",10} }, technology = "turrets-mk2" }
+    { order ="a", name = "gun-turret-mk1", range = 25, cooldown = 5, damage_modifier = 1.5, next_upgrade = "gun-turret-mk2", ingredients = { {"gun-turret", 2},{"vibranium-plate",5} }, technology = "turrets-mk1" },
+    { order ="b", name = "gun-turret-mk2", range = 35, cooldown = 4, damage_modifier = 2, next_upgrade = "", ingredients = { {"gun-turret-mk1", 2},{"vibranium-plate",10} }, technology = "turrets-mk2" }
 }
 
 laser_turrets =
 {
-    { order ="b-a", name = "laser-turret-mk1", range = 30, cooldown = 30, damage_modifier = 3, energy_consumption = "1000kJ", next_upgrade = "laser-turret-mk2", ingredients = { {"laser-turret", 2},{"vibranium-plate",5} }, technology = "turrets-mk1" },
-    { order ="b-b", name = "laser-turret-mk2", range = 45, cooldown = 20, damage_modifier = 4, energy_consumption = "1200kJ", next_upgrade = "", ingredients = { {"laser-turret-mk1", 2},{"vibranium-plate",10} }, technology = "turrets-mk2" }
+    { order ="a", name = "laser-turret-mk1", range = 30, cooldown = 30, damage_modifier = 3, energy_consumption = "1000kJ", next_upgrade = "laser-turret-mk2", ingredients = { {"laser-turret", 2},{"vibranium-plate",5} }, technology = "turrets-mk1" },
+    { order ="b", name = "laser-turret-mk2", range = 45, cooldown = 20, damage_modifier = 4, energy_consumption = "1200kJ", next_upgrade = "", ingredients = { {"laser-turret-mk1", 2},{"vibranium-plate",10} }, technology = "turrets-mk2" }
 }
 
 flamethrower_turrets =
 {
-    { order ="c-a", name = "flamethrower-turret-mk1", min_range = 10, range = 38, cooldown = 3, damage_modifier = 1.5, fluid_consumption = 0.3, next_upgrade = "flamethrower-turret-mk2", ingredients = { {"flamethrower-turret", 2},{"vibranium-plate",5} }, technology = "turrets-mk1" },
-    { order ="c-b", name = "flamethrower-turret-mk2", min_range = 15, range = 45, cooldown = 2, damage_modifier = 2, fluid_consumption = 0.4, next_upgrade = "", ingredients = { {"flamethrower-turret-mk1", 2},{"vibranium-plate",10} }, technology = "turrets-mk2" }
+    { order ="a", name = "flamethrower-turret-mk1", min_range = 10, range = 38, cooldown = 3, damage_modifier = 1.5, fluid_consumption = 0.3, next_upgrade = "flamethrower-turret-mk2", ingredients = { {"flamethrower-turret", 2},{"vibranium-plate",5} }, technology = "turrets-mk1" },
+    { order ="b", name = "flamethrower-turret-mk2", min_range = 15, range = 45, cooldown = 2, damage_modifier = 2, fluid_consumption = 0.4, next_upgrade = "", ingredients = { {"flamethrower-turret-mk1", 2},{"vibranium-plate",10} }, technology = "turrets-mk2" }
 }
 
 walls =

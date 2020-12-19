@@ -7,6 +7,12 @@ data:extend(
     }
 )
 
+local subgroup = "ammo"
+
+if settings.startup["zombies-use-seperate-tab"].value == true then        
+    subgroup = "ds-sniper"
+end
+
 for x,ammo in pairs(sniper_rifle_ammo) do
      
     table.insert(data.raw["technology"][ammo.technology].effects, { type = "unlock-recipe", recipe = ammo.name })
@@ -57,8 +63,8 @@ for x,ammo in pairs(sniper_rifle_ammo) do
                     }
                 },
                 magazine_size = 10,
-                subgroup = "ds-sniper",
-                order = ammo.order,
+                subgroup = subgroup,
+                order = "a[basic-clips]-" .. ammo.order,
                 stack_size = 200
             }
         }

@@ -1,3 +1,8 @@
+local subgroup = "ammo"
+
+if settings.startup["zombies-use-seperate-tab"].value == true then        
+    subgroup = "ds-rockets"
+end
 
 for x,rocket in pairs(rocket_ammo) do
          
@@ -37,8 +42,8 @@ for x,rocket in pairs(rocket_ammo) do
                         }
                     }
                 },
-                subgroup = "ds-rockets",
-                order = rocket.order,
+                subgroup = subgroup,
+                order = "d[rocket-launcher]-" .. rocket.order,
                 stack_size = 200
             },
         }

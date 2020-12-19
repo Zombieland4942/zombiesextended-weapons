@@ -32,9 +32,12 @@ for x, gate in pairs(gates) do
     item.name = gate.name
     item.icon = "__zombiesextended-weapons__/graphics/icons/" .. gate.name .. ".png"
     item.place_result = gate.name
-    item.order = gate.order
-    item.subgroup = "ds-wall"
- 
+    item.order = item.order .. gate.order
+
+    if settings.startup["zombies-use-seperate-tab"].value == true then        
+        item.subgroup = "ds-wall"
+    end
+    
     table.insert(data.raw["technology"][gate.technology].effects, { type = "unlock-recipe", recipe = gate.name })
 
     data:extend({ entity, item,

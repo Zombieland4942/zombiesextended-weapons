@@ -23,9 +23,12 @@ for x, radar in pairs(radars) do
     item.name = radar.name
     item.icon = "__zombiesextended-weapons__/graphics/icons/" .. radar.name .. ".png"
     item.place_result = radar.name
-    item.order = radar.order
-    item.subgroup = "ds-radar"
-     
+     item.order = item.order .. radar.order
+
+    if settings.startup["zombies-use-seperate-tab"].value == true then        
+        item.subgroup = "ds-radar"
+    end
+    
     table.insert(data.raw["technology"][radar.technology].effects, { type = "unlock-recipe", recipe = radar.name })
 
     data:extend({ entity, item,

@@ -19,9 +19,12 @@ for x, gun_turret in pairs(gun_turrets) do
     item.name = gun_turret.name
     item.icon = "__zombiesextended-weapons__/graphics/icons/" .. gun_turret.name .. ".png"
     item.place_result = gun_turret.name
-    item.order = gun_turret.order
-    item.subgroup = "ds-turrets"
- 
+    item.order = item.order .. gun_turret.order
+
+    if settings.startup["zombies-use-seperate-tab"].value == true then        
+        item.subgroup = "ds-turrets"
+    end
+     
     table.insert(data.raw["technology"][gun_turret.technology].effects, { type = "unlock-recipe", recipe = gun_turret.name })
 
     data:extend({ entity, item,

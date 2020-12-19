@@ -1,3 +1,8 @@
+local subgroup = "ammo"
+
+if settings.startup["zombies-use-seperate-tab"].value == true then        
+    subgroup = "ds-assult"
+end
 
 for x,ammo in pairs(assault_rifle_ammo) do
      
@@ -49,8 +54,8 @@ for x,ammo in pairs(assault_rifle_ammo) do
                     }
                 },
                 magazine_size = 10,
-                subgroup = "ds-assult",
-                order = ammo.order,
+                subgroup = subgroup,
+                order = "a[basic-clips]-" .. ammo.order,
                 stack_size = 200
             }
         }

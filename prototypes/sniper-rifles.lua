@@ -1,3 +1,8 @@
+local subgroup = "gun"
+
+if settings.startup["zombies-use-seperate-tab"].value == true then        
+    subgroup = "ds-sniper"
+end    
 
 for x,sniper in pairs(sniper_rifle) do
     
@@ -20,8 +25,8 @@ for x,sniper in pairs(sniper_rifle) do
                     { icon = "__zombiesextended-weapons__/graphics/icons/" .. sniper.name .. ".png", icon_size = 64, icon_mipmaps = 4 },
                     { icon = "__zombiesextended-weapons__/graphics/icons/" .. sniper.icon_teir .. ".png", icon_size = 64 }
                 },                
-                subgroup = "ds-sniper",
-                order = sniper.order,
+                subgroup = subgroup,
+                order = "a[basic-clips]-" .. sniper.order,
                 attack_parameters =
                 {
                     type = "projectile",

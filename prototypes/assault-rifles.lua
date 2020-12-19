@@ -1,3 +1,8 @@
+local subgroup = "gun"
+
+if settings.startup["zombies-use-seperate-tab"].value == true then        
+    subgroup = "ds-assult"
+end    
 
 for x,ar in pairs(assault_rifle) do 
 
@@ -20,8 +25,8 @@ for x,ar in pairs(assault_rifle) do
                     { icon = "__zombiesextended-weapons__/graphics/icons/" .. ar.name .. ".png", icon_size = 64, icon_mipmaps = 4 },
                     { icon = "__zombiesextended-weapons__/graphics/icons/" .. ar.icon_teir .. ".png", icon_size = 64 }
                 },
-                subgroup = "ds-assult",
-                order = ar.order,
+                subgroup = subgroup,
+                order = "a[basic-clips]-" .. ar.order,
                 attack_parameters =
                 {
                     type = "projectile",

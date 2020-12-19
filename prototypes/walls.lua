@@ -39,8 +39,11 @@ for x, wall in pairs(walls) do
     item.name = wall.name
     item.icon = "__zombiesextended-weapons__/graphics/icons/" .. wall.name .. ".png"
     item.place_result = wall.name
-    item.order = wall.order
-    item.subgroup = "ds-wall"
+    item.order = item.order .. wall.order
+
+    if settings.startup["zombies-use-seperate-tab"].value == true then        
+        item.subgroup = "ds-wall"
+    end
  
     table.insert(data.raw["technology"][wall.technology].effects, { type = "unlock-recipe", recipe = wall.name })
 
