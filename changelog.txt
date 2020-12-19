@@ -7,7 +7,7 @@ Version: 1.0.14
 Date: 2020-12-19
   Changes:
     - Added new experimental setting to relocate items into their normal vanilla locations
-    - Updated all items in Power to respect the new setting above
+    - Updated all items in Weapons to respect the new setting above
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.13
 Date: 2020-12-18
