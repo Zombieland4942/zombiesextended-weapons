@@ -42,8 +42,8 @@ data.raw["radar"]["radar"].next_upgrade = "radar-mk1"
 
 assault_rifle = 
 {
-    { order = "c-a", name = "assault-rifle-mk1", icon_teir="teir-1", range = 40, cooldown = 10, ingredients = { {"submachine-gun",4} }, technology = "advanced-rifles-mk1" },
-    { order = "c-b", name = "assault-rifle-mk2", icon_teir="teir-2", range = 80, cooldown = 6, ingredients = { {"assault-rifle-mk1",2},{"vibranium-plate",20} }, technology = "advanced-rifles-mk2" }
+    { order = "c-1", name = "assault-rifle-mk1", icon_teir="teir-1", range = 40, cooldown = 10, ingredients = { {"submachine-gun",4} }, technology = "advanced-rifles-mk1" },
+    { order = "c-2", name = "assault-rifle-mk2", icon_teir="teir-2", range = 80, cooldown = 6, ingredients = { {"assault-rifle-mk1",2},{"vibranium-plate",20} }, technology = "advanced-rifles-mk2" }
 }
 
 sniper_rifle = 
