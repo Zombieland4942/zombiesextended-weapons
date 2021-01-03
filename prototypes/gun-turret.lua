@@ -32,7 +32,7 @@ for x, gun_turret in pairs(gun_turrets) do
             type = "recipe",
             name = gun_turret.name,
             enabled = false,
-            energy_required = 5,
+            energy_required = gun_turret.craft_time,
             ingredients = gun_turret.ingredients,
             result = gun_turret.name
         },

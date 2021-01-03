@@ -14,7 +14,7 @@ for x,ar in pairs(assault_rifle) do
                 type = "recipe",
                 name = ar.name,
                 enabled = false,
-                energy_required = 5,
+                energy_required = ar.craft_time,
                 ingredients = ar.ingredients,
                 result = ar.name
             },

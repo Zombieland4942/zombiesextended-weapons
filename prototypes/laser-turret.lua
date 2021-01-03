@@ -39,7 +39,7 @@ for x, laser_turret in pairs(laser_turrets) do
             type = "recipe",
             name = laser_turret.name,
             enabled = false,
-            energy_required = 5,
+            energy_required = laser_turret.craft_time,
             ingredients = laser_turret.ingredients,
             result = laser_turret.name
         },

@@ -43,7 +43,7 @@ for x, flamethrower_turret in pairs(flamethrower_turrets) do
             type = "recipe",
             name = flamethrower_turret.name,
             enabled = false,
-            energy_required = 5,
+            energy_required = flamethrower_turret.craft_time,
             ingredients = flamethrower_turret.ingredients,
             result = flamethrower_turret.name
         },

@@ -14,7 +14,7 @@ for x,sniper in pairs(sniper_rifle) do
                 type = "recipe",
                 name = sniper.name,
                 enabled = false,
-                energy_required = 5,
+                energy_required = sniper.craft_time,
                 ingredients = sniper.ingredients,
                 result = sniper.name
             },        

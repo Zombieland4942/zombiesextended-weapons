@@ -36,7 +36,7 @@ for x, radar in pairs(radars) do
             type = "recipe",
             name = radar.name,
             enabled = false,
-            energy_required = 5,
+            energy_required = radar.craft_time,
             ingredients = radar.ingredients,
             result = radar.name
         }

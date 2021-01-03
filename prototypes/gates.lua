@@ -45,7 +45,7 @@ for x, gate in pairs(gates) do
             type = "recipe",
             name = gate.name,
             enabled = false,
-            energy_required = 5,
+            energy_required = gate.craft_time,
             ingredients = gate.ingredients,
             result = gate.name
         },

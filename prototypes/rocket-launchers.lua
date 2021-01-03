@@ -14,7 +14,7 @@ for x,launcher in pairs(rocket_launcher) do
                 type = "recipe",
                 name = launcher.name,
                 enabled = false,
-                energy_required = 5,
+                energy_required = launcher.craft_time,
                 ingredients = launcher.ingredients,
                 result = launcher.name
             },

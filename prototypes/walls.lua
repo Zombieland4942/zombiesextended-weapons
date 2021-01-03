@@ -52,7 +52,7 @@ for x, wall in pairs(walls) do
             type = "recipe",
             name = wall.name,
             enabled = false,
-            energy_required = 5,
+            energy_required = wall.craft_time,
             ingredients = wall.ingredients,
             result = wall.name
         },
