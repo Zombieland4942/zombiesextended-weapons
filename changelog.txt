@@ -2,6 +2,9 @@
 Version: 1.0.16
 Date: ????
   Changes:
+    - Added Fire Damage to the Antimatter Nuke
+    - Lowered the Antimatter Nuke Range
+    - Buffed the Antimatter Nuke Rolling Damage
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.15
 Date: 2021-01-03

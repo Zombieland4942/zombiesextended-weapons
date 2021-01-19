@@ -14,16 +14,7 @@ for x,projectile in pairs(rocket_projectile) do
                     {
                         type = "instant",
                         target_effects = 
-                        {
-                            {
-                                type = "set-tile",
-                                apply_projection = true,
-                                radius = projectile.crater_size,
-                                tile_collision_mask = {
-                                    "water-tile"
-                                },
-                                tile_name = "nuclear-ground",
-                            },
+                        {                            
                             {
                                 type = "destroy-cliffs",
                                 explosion = "explosion",
@@ -148,6 +139,36 @@ for x,projectile in pairs(rocket_projectile) do
                                     target_entities = false,
                                     trigger_from_target = true,
                                 },
+                            },                            
+                            {
+                                type = "nested-result",
+                                action =
+                                {
+                                    type = "area",
+                                    radius = projectile.radius/2,                                    
+                                    repeat_count = 2000,
+                                    action_delivery =
+                                    {
+                                        type = "instant",
+                                        target_effects =
+                                        {
+                                            {
+                                                type = "damage",
+                                                damage = { amount = 400, type = "fire" }
+                                            },
+                                            {
+                                                type = "create-fire",
+                                                entity_name = "fire-flame",
+                                                show_in_tooltip = false
+                                            },
+                                            {
+                                                type = "create-sticker",
+                                                sticker = "fire-sticker",
+                                                show_in_tooltip = true
+                                            },
+                                        }
+                                    }
+                                }
                             },
                             {
                                 type = "nested-result",
@@ -159,8 +180,8 @@ for x,projectile in pairs(rocket_projectile) do
                                         starting_speed = 0.6,
                                         starting_speed_deviation = 0.075,
                                     },
-                                    radius = projectile.radius,
-                                    repeat_count = 2000,
+                                    radius = 20,
+                                    repeat_count = 3000,
                                     show_in_tooltip = false,
                                     target_entities = false,
                                     trigger_from_target = true,
@@ -176,8 +197,8 @@ for x,projectile in pairs(rocket_projectile) do
                                         starting_speed = 0.6,
                                         starting_speed_deviation = 0.075,
                                     },
-                                    radius = projectile.radius,
-                                    repeat_count = 10000,
+                                    radius = 50,
+                                    repeat_count = 15000,
                                     show_in_tooltip = false,
                                     target_entities = false,
                                     trigger_from_target = true,

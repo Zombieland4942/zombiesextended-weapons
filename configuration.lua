@@ -76,7 +76,7 @@ sniper_rifle_ammo =
 
 rocket_projectile =
 {
-    { name = "antimatter-nuke-projectile-mk1", damage_amount = 1000, radius = 80, crater_size = 20, flash_duration = 100, flash_max_distance = 1500, flash_strength = 10 }
+    { name = "antimatter-nuke-projectile-mk1", damage_amount = 2000, radius = 50, crater_size = 20, flash_duration = 100, flash_max_distance = 1500, flash_strength = 10 }
 }
 
 rocket_ammo =
